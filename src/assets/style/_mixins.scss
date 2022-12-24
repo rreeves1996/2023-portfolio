@@ -1,0 +1,37 @@
+@mixin noSelect {
+	pointer-events: none;
+	user-select: none;
+}
+
+@mixin flexCenter {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+@mixin flexRowJustify($justify) {
+	display: flex;
+	justify-content: $justify;
+}
+@mixin flexRowAlign($align) {
+	display: flex;
+	align-items: $align;
+}
+@mixin flexColumnAlign($align) {
+	display: flex;
+	align-items: $align;
+	flex-direction: column;
+}
+@mixin flexColumnJustify($justify) {
+	display: flex;
+	justify-content: $justify;
+	flex-direction: column;
+}
+@mixin flexJustifyAlign($justify, $align) {
+	display: flex;
+	justify-content: $justify;
+	align-items: $align;
+}
+
+@mixin layoutPadding($width) {
+	padding: 0.5rem calc((100vw - $width) / 2);
+}

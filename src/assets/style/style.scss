@@ -1,0 +1,42 @@
+@import './fonts';
+@import './variables';
+@import './mixins';
+@import './navbar';
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	line-height: 1;
+}
+html {
+	height: 100%;
+}
+ol,
+ul {
+	list-style: none;
+}
+h1,
+h2,
+h3,
+h4 {
+	font-family: $accentText;
+}
+h5,
+h6 {
+	font-family: $primaryText;
+	font-weight: 700;
+}
+body {
+	font-family: $primaryText;
+	font-weight: 300;
+	overflow-x: hidden;
+}
+main {
+	width: 100vw;
+	min-height: calc(100vh - 130px);
+}
+footer {
+	width: 100vw;
+	height: 50px;
+}

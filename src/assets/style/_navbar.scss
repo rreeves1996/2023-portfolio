@@ -1,0 +1,7 @@
+nav {
+	@include flexJustifyAlign(space-between, center);
+	@include layoutPadding(1150px);
+
+	width: 100vw;
+	height: 80px;
+}
