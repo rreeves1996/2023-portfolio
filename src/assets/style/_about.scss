@@ -1,0 +1,23 @@
+.about {
+	background: $purpleVeryDark;
+	border-radius: 40px;
+	padding: 1.5rem 2.5rem;
+
+	header {
+		display: flex;
+		align-items: flex-end;
+
+		h2 {
+			font-size: 3.5rem;
+		}
+
+		a {
+			@include flexRowAlign(center);
+
+			font-size: 1.4rem;
+			color: $purpleAccent;
+			text-underline-offset: 2px;
+			margin: 0 0 0.4rem 0.6rem;
+		}
+	}
+}

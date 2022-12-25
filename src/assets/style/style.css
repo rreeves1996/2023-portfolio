@@ -94,7 +94,7 @@ nav {
   display: flex;
   flex-direction: column;
   height: 19rem;
-  min-height: 85vh;
+  min-height: 81vh;
 }
 .home section {
   display: flex;
@@ -102,8 +102,45 @@ nav {
   align-items: center;
   height: 100%;
 }
-
-.home-button {
+.home header {
+  display: flex;
+  flex-direction: column;
+  font-size: 200%;
+  padding-top: 13%;
+  filter: drop-shadow(0px 0px 100px rgba(255, 255, 255, 0.178));
+}
+.home header code {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.2rem;
+  width: 12rem;
+  font-size: 1.3rem;
+  background: #5dffd9;
+  color: #5f37ce;
+  letter-spacing: -1px;
+  margin-bottom: 1rem;
+}
+.home header h1 {
+  display: flex;
+  align-items: center;
+  font-size: 8rem;
+  color: #f5f2f5;
+  text-indent: 0.5rem;
+  opacity: 0.95;
+  filter: drop-shadow(-8px 6px 0px #41d4b7);
+}
+.home header h4 {
+  font-size: 2.2rem;
+  font-weight: 200;
+  text-indent: 3rem;
+  margin-top: 0.7rem;
+}
+.home header h4 strong {
+  color: #5dffd9;
+  font-weight: 500;
+}
+.home .home-button {
   width: 8rem;
   height: 3.5rem;
   margin: 2rem;
@@ -117,55 +154,41 @@ nav {
   cursor: pointer;
   transition: background 200ms, color 200ms;
 }
-
-header {
-  display: flex;
-  flex-direction: column;
-  font-size: 200%;
-  padding-top: 13%;
-  filter: drop-shadow(0px 0px 100px rgba(255, 255, 255, 0.178));
-}
-header code {
-  font-size: 1.3rem;
-  color: #5dffd9;
-  letter-spacing: -1px;
-}
-header h1 {
-  display: flex;
-  align-items: center;
-  font-size: 8rem;
-  color: #f5f2f5;
-  text-indent: 0.5rem;
-  opacity: 0.95;
-  filter: drop-shadow(-8px 6px 0px #41d4b7);
-}
-header h4 {
-  font-size: 2.2rem;
-  font-weight: 200;
-  text-indent: 3rem;
-  margin-top: 2rem;
-}
-header h4 strong {
-  color: #5dffd9;
-  font-weight: 500;
-}
-
-.bracket-square {
+.home .bracket-square {
   font-size: 5rem;
   margin-left: 1rem;
 }
-
-#projects-button:hover {
+.home #projects-button:hover {
   background: #5dffd9;
   color: #412291;
 }
-
-#contact-button {
+.home #contact-button {
   border: none;
   background: rgba(255, 255, 255, 0.103);
 }
-#contact-button:hover {
+.home #contact-button:hover {
   background: rgba(255, 255, 255, 0.151);
+}
+
+.about {
+  background: #21114b;
+  border-radius: 40px;
+  padding: 1.5rem 2.5rem;
+}
+.about header {
+  display: flex;
+  align-items: flex-end;
+}
+.about header h2 {
+  font-size: 3.5rem;
+}
+.about header a {
+  display: flex;
+  align-items: center;
+  font-size: 1.4rem;
+  color: #8b03cd;
+  text-underline-offset: 2px;
+  margin: 0 0 0.4rem 0.6rem;
 }
 
 * {
