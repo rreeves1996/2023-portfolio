@@ -10,10 +10,12 @@
 }
 @mixin flexRowJustify($justify) {
 	display: flex;
+	flex-direction: row;
 	justify-content: $justify;
 }
 @mixin flexRowAlign($align) {
 	display: flex;
+	flex-direction: row;
 	align-items: $align;
 }
 @mixin flexColumnAlign($align) {

@@ -98,9 +98,16 @@ nav {
 }
 .home section {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: row;
+  align-items: flex-end;
   height: 100%;
+  width: 100%;
+}
+.home section .home-menu {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0 auto;
 }
 .home header {
   display: flex;
@@ -123,6 +130,7 @@ nav {
 }
 .home header h1 {
   display: flex;
+  flex-direction: row;
   align-items: center;
   font-size: 8rem;
   color: #f5f2f5;
@@ -184,6 +192,7 @@ nav {
 }
 .about header a {
   display: flex;
+  flex-direction: row;
   align-items: center;
   font-size: 1.4rem;
   color: #8b03cd;

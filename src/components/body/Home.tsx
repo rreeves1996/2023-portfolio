@@ -21,6 +21,7 @@ export default function Home() {
 					<button className='home-button' id='projects-button'>
 						Projects
 					</button>
+					<div className='divider' />
 					<button className='home-button' id='contact-button'>
 						Contact
 					</button>

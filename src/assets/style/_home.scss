@@ -6,9 +6,16 @@
 	min-height: 81vh;
 
 	section {
-		@include flexCenter();
+		@include flexRowAlign(flex-end);
 
 		height: 100%;
+		width: 100%;
+
+		.home-menu {
+			@include flexRowAlign(center);
+
+			margin: 0 auto;
+		}
 	}
 
 	header {
