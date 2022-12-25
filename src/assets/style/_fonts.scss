@@ -2,6 +2,11 @@
 
 @font-face {
 	font-family: 'Qualy';
+	src: local('Qualy'), url('./fonts/Qualy/Qualy.ttf') format('truetype');
+	font-weight: normal;
+}
+@font-face {
+	font-family: 'Qualy';
 	src: local('Qualy'), url('./fonts/Qualy/Qualy-Bold.ttf') format('truetype');
 	font-weight: bold;
 }

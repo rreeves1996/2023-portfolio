@@ -1,5 +1,10 @@
 @font-face {
   font-family: "Qualy";
+  src: local("Qualy"), url("./fonts/Qualy/Qualy.ttf") format("truetype");
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Qualy";
   src: local("Qualy"), url("./fonts/Qualy/Qualy-Bold.ttf") format("truetype");
   font-weight: bold;
 }
@@ -79,9 +84,64 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.5rem calc((100vw - 1150px) / 2);
+  padding: 0.5rem calc((100vw - 1350px) / 2);
   width: 100vw;
   height: 80px;
+}
+
+.home {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 19rem;
+  min-height: 85vh;
+}
+.home section {
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  font-size: 200%;
+  padding-top: 13%;
+  filter: drop-shadow(0px 0px 100px rgba(255, 255, 255, 0.178));
+}
+header code {
+  font-size: 1.3rem;
+  color: #5dffd9;
+  letter-spacing: -1px;
+}
+header h1 {
+  display: flex;
+  align-items: center;
+  font-size: 8rem;
+  color: #f5f2f5;
+  text-indent: 0.5rem;
+  opacity: 0.95;
+  filter: drop-shadow(-8px 6px 0px #41d4b7);
+}
+header h4 {
+  font-size: 2.2rem;
+  font-weight: 200;
+  text-indent: 3rem;
+  margin-top: 2rem;
+}
+header h4 strong {
+  color: #5dffd9;
+  font-weight: 500;
+}
+
+.bracket-square {
+  font-size: 5rem;
+  margin-left: 1rem;
+}
+
+.home-menu h4 {
+  display: flex;
+  font-size: 3rem;
 }
 
 * {
@@ -100,28 +160,44 @@ ul {
   list-style: none;
 }
 
-h1,
+h1 {
+  font-weight: bold;
+  font-size: 3.5rem;
+}
+
 h2,
 h3,
 h4 {
+  font-weight: normal;
+}
+
+h1,
+h2,
+h3 {
   font-family: "Qualy";
 }
 
+h4,
 h5,
 h6 {
   font-family: "Roboto";
   font-weight: 700;
 }
 
+p {
+  font-size: 1rem;
+}
+
 body {
   font-family: "Roboto";
   font-weight: 300;
   overflow-x: hidden;
+  background: #412291;
+  color: #f5f2f5;
 }
 
 main {
-  width: 100vw;
-  min-height: calc(100vh - 130px);
+  padding: 0.5rem calc((100vw - 1350px) / 2);
 }
 
 footer {

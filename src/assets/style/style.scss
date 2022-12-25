@@ -2,6 +2,7 @@
 @import './variables';
 @import './mixins';
 @import './navbar';
+@import './home';
 
 * {
 	margin: 0;
@@ -16,25 +17,38 @@ ol,
 ul {
 	list-style: none;
 }
-h1,
+h1 {
+	font-weight: bold;
+	font-size: 3.5rem;
+}
 h2,
 h3,
 h4 {
+	font-weight: normal;
+}
+h1,
+h2,
+h3 {
 	font-family: $accentText;
 }
+h4,
 h5,
 h6 {
 	font-family: $primaryText;
 	font-weight: 700;
 }
+p {
+	font-size: 1rem;
+}
 body {
 	font-family: $primaryText;
 	font-weight: 300;
 	overflow-x: hidden;
+	background: $purpleDark;
+	color: $offWhite;
 }
 main {
-	width: 100vw;
-	min-height: calc(100vh - 130px);
+	@include layoutPadding(1350px);
 }
 footer {
 	width: 100vw;
