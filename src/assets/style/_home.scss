@@ -6,12 +6,25 @@
 	min-height: 85vh;
 
 	section {
-		display: flex;
+		@include flexCenter();
+
 		height: 100%;
-		align-items: center;
 	}
 }
-
+.home-button {
+	width: 8rem;
+	height: 3.5rem;
+	margin: 2rem;
+	background: transparent;
+	color: $greenLight;
+	border: 3px solid $greenLight;
+	border-radius: 8px;
+	letter-spacing: 0.1rem;
+	font-family: 'Roboto';
+	font-size: 1.1rem;
+	cursor: pointer;
+	transition: background 200ms, color 200ms;
+}
 header {
 	display: flex;
 	flex-direction: column;
@@ -52,13 +65,17 @@ header {
 	margin-left: 1rem;
 }
 
-.home-menu {
-	h4 {
-		@include flexRowAlign();
+#projects-button {
+	&:hover {
+		background: $greenLight;
+		color: $purpleDark;
+	}
+}
 
-		font-size: 3rem;
-		svg {
-			transform: scale(0.5) !important;
-		}
+#contact-button {
+	border: none;
+	background: rgba(255, 255, 255, 0.103);
+	&:hover {
+		background: rgba(255, 255, 255, 0.151);
 	}
 }

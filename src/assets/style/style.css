@@ -98,8 +98,24 @@ nav {
 }
 .home section {
   display: flex;
-  height: 100%;
+  justify-content: center;
   align-items: center;
+  height: 100%;
+}
+
+.home-button {
+  width: 8rem;
+  height: 3.5rem;
+  margin: 2rem;
+  background: transparent;
+  color: #5dffd9;
+  border: 3px solid #5dffd9;
+  border-radius: 8px;
+  letter-spacing: 0.1rem;
+  font-family: "Roboto";
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background 200ms, color 200ms;
 }
 
 header {
@@ -139,9 +155,17 @@ header h4 strong {
   margin-left: 1rem;
 }
 
-.home-menu h4 {
-  display: flex;
-  font-size: 3rem;
+#projects-button:hover {
+  background: #5dffd9;
+  color: #412291;
+}
+
+#contact-button {
+  border: none;
+  background: rgba(255, 255, 255, 0.103);
+}
+#contact-button:hover {
+  background: rgba(255, 255, 255, 0.151);
 }
 
 * {

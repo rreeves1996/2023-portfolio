@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaChevronRight } from 'react-icons/fa';
+import { RxCaretRight } from 'react-icons/rx';
 import { HiCodeBracketSquare } from 'react-icons/hi2';
 
 export default function Home() {
@@ -18,15 +18,12 @@ export default function Home() {
 			</header>
 			<section>
 				<div className='home-menu'>
-					<h4>
-						<FaChevronRight className='chevron' /> About
-					</h4>
-					<h4>
-						<FaChevronRight className='chevron' /> Portfolio
-					</h4>
-					<h4>
-						<FaChevronRight className='chevron' /> Contact
-					</h4>
+					<button className='home-button' id='projects-button'>
+						Projects
+					</button>
+					<button className='home-button' id='contact-button'>
+						Contact
+					</button>
 				</div>
 			</section>
 		</section>
