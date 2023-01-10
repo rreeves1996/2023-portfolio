@@ -3,7 +3,7 @@
 	border-radius: 40px;
 	padding: 1.5rem 2.5rem;
 
-	header {
+	.title {
 		display: flex;
 		align-items: flex-end;
 
@@ -14,10 +14,30 @@
 		a {
 			@include flexRowAlign(center);
 
-			font-size: 1.4rem;
+			font-size: 1.2rem;
 			color: $purpleAccent;
 			text-underline-offset: 2px;
 			margin: 0 0 0.4rem 0.6rem;
 		}
+	}
+	header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		margin: 2.5rem auto;
+		min-width: 25rem;
+		width: 90%;
+		.img-wrapper {
+			@include flexCenter();
+
+			border-radius: 15px;
+			width: 40%;
+
+			overflow: hidden;
+		}
+	}
+	.about-body {
+		width: 50% !important;
 	}
 }

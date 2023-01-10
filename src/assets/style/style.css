@@ -93,7 +93,7 @@ nav {
   position: relative;
   display: flex;
   flex-direction: column;
-  height: 19rem;
+  height: 35rem;
   min-height: 81vh;
 }
 .home section {
@@ -183,21 +183,37 @@ nav {
   border-radius: 40px;
   padding: 1.5rem 2.5rem;
 }
-.about header {
+.about .title {
   display: flex;
   align-items: flex-end;
 }
-.about header h2 {
+.about .title h2 {
   font-size: 3.5rem;
 }
-.about header a {
+.about .title a {
   display: flex;
   flex-direction: row;
   align-items: center;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   color: #8b03cd;
   text-underline-offset: 2px;
   margin: 0 0 0.4rem 0.6rem;
+}
+.about header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2.5rem auto;
+  min-width: 25rem;
+  width: 90%;
+}
+.about header .img-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  width: 40%;
+  overflow: hidden;
 }
 
 * {
@@ -250,6 +266,7 @@ body {
   overflow-x: hidden;
   background: #412291;
   color: #f5f2f5;
+  padding: 0 1rem;
 }
 
 main {
