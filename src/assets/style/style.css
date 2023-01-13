@@ -201,8 +201,10 @@ nav {
 }
 .about header {
   display: flex;
-  justify-content: space-between;
+  flex-direction: row;
   align-items: center;
+  justify-content: space-evenly;
+  height: 100%;
   margin: 2.5rem auto;
   min-width: 25rem;
   width: 90%;
@@ -211,9 +213,28 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 15px;
+  height: 100%;
   width: 40%;
-  overflow: hidden;
+  float: left;
+}
+.about header .img-wrapper .portrait {
+  width: 100%;
+}
+.about header .about-text {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  width: 60%;
+}
+.about header .about-text h1 {
+  font-size: 2rem;
+  margin: 2rem;
+}
+.about header .about-text p {
+  text-indent: 3rem;
+  font-size: 1.2rem !important;
 }
 
 * {
