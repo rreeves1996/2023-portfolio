@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 import { AiOutlineDoubleRight } from 'react-icons/ai';
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
-import { Swiper, SwiperSlide } from 'swiper/react';
+import { GoEllipsis } from 'react-icons/go';
+
 import portrait from '../../assets/images/me.png';
-import 'swiper/css';
 
 const SLIDES = [
 	<p>
@@ -19,6 +18,10 @@ const SLIDES = [
 	<p>
 		Since graduating my Full-Stack Development boot camp on September 17th, I've
 		narrowed my focus into Front-End Development, primarily React.
+	</p>,
+	<p>
+		Today, I stack rocks and bricks by day and program by night, eagerly
+		awaiting my first position in Front-End Development. 🗿
 	</p>,
 ];
 
@@ -47,7 +50,9 @@ export default function About() {
 					<h1>Learner, musician, engineer </h1>
 					<div className='about-body'>
 						{currentSlide}
-						<button onClick={() => handleAddSlide()}>...</button>
+						<button onClick={() => handleAddSlide()}>
+							<GoEllipsis />
+						</button>
 					</div>
 				</div>
 			</header>

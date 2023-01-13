@@ -30,35 +30,104 @@
 	}
 	header {
 		@include flexRowAlign(center);
-		justify-content: space-evenly;
+		justify-content: center;
 
 		height: 100%;
 		margin: 2.5rem auto;
 		min-width: 25rem;
-		width: 90%;
+		width: 95%;
+		flex-wrap: wrap;
+
 		.img-wrapper {
 			@include flexCenter();
-			height: 100%;
-			width: 40%;
-			float: left;
+			flex: 1 1 20rem;
+			max-width: 28rem;
+			margin: 2rem;
 			.portrait {
+				margin: auto;
 				width: 100%;
+				border-radius: 8px;
 			}
 		}
 
 		.about-text {
 			@include flexColumnAlign(center);
 			justify-content: space-between;
-			height: 100%;
 			width: 60%;
+			flex: 1 1 20rem;
 			h1 {
 				font-size: 2rem;
 				margin: 2rem;
 			}
 			p {
 				text-indent: 3rem;
-				font-size: 1.2rem !important;
+				font-size: 1.8rem !important;
+				font-weight: 200;
+
+				strong {
+					font-weight: 500;
+				}
+			}
+			button {
+				@include flexCenter();
+				border: none;
+				background-color: transparent;
+				width: 5rem;
+				height: 2.5rem;
+				color: rgba(255, 255, 255, 0.171);
+				font-size: 6rem;
+				margin: 1rem;
+				cursor: pointer;
+
+				transition: all 200ms;
+				animation: float 6s ease-in-out;
+				animation-iteration-count: infinite;
+
+				&:hover {
+					color: rgba(255, 255, 255, 0.26);
+					font-size: 6.5rem;
+				}
 			}
 		}
+	}
+}
+
+@-webkit-keyframes float {
+	0% {
+		top: 0px;
+	}
+
+	50% {
+		top: 5px;
+	}
+
+	100% {
+		top: 0px;
+	}
+}
+@-moz-keyframes float {
+	0% {
+		top: 0px;
+	}
+
+	50% {
+		top: 5px;
+	}
+
+	100% {
+		top: 0px;
+	}
+}
+@keyframes float {
+	0% {
+		top: 0px;
+	}
+
+	50% {
+		top: 5px;
+	}
+
+	100% {
+		top: 0px;
 	}
 }

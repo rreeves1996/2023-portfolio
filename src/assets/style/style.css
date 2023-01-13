@@ -211,30 +211,33 @@ nav {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
   height: 100%;
   margin: 2.5rem auto;
   min-width: 25rem;
-  width: 90%;
+  width: 95%;
+  flex-wrap: wrap;
 }
 .about header .img-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%;
-  width: 40%;
-  float: left;
+  flex: 1 1 20rem;
+  max-width: 28rem;
+  margin: 2rem;
 }
 .about header .img-wrapper .portrait {
+  margin: auto;
   width: 100%;
+  border-radius: 8px;
 }
 .about header .about-text {
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: space-between;
-  height: 100%;
   width: 60%;
+  flex: 1 1 20rem;
 }
 .about header .about-text h1 {
   font-size: 2rem;
@@ -242,9 +245,57 @@ nav {
 }
 .about header .about-text p {
   text-indent: 3rem;
-  font-size: 1.2rem !important;
+  font-size: 1.8rem !important;
+  font-weight: 200;
+}
+.about header .about-text p strong {
+  font-weight: 500;
+}
+.about header .about-text button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background-color: transparent;
+  width: 5rem;
+  height: 2.5rem;
+  color: rgba(255, 255, 255, 0.171);
+  font-size: 6rem;
+  margin: 1rem;
+  cursor: pointer;
+  transition: all 200ms;
+  -webkit-animation: float 6s ease-in-out;
+          animation: float 6s ease-in-out;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+.about header .about-text button:hover {
+  color: rgba(255, 255, 255, 0.26);
+  font-size: 6.5rem;
 }
 
+@-webkit-keyframes float {
+  0% {
+    top: 0px;
+  }
+  50% {
+    top: 5px;
+  }
+  100% {
+    top: 0px;
+  }
+}
+@keyframes float {
+  0% {
+    top: 0px;
+  }
+  50% {
+    top: 5px;
+  }
+  100% {
+    top: 0px;
+  }
+}
 * {
   margin: 0;
   padding: 0;
