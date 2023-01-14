@@ -20,7 +20,7 @@ const SLIDES = [
 		narrowed my focus into Front-End Development, primarily React.
 	</p>,
 	<p>
-		Today, I stack rocks and bricks by day and program by night, eagerly
+		Today, I play with rocks and bricks by day and program by night, eagerly
 		awaiting my first position in Front-End Development. 🗿
 	</p>,
 ];
@@ -56,7 +56,9 @@ export default function About() {
 						{currentSlide}
 						<button
 							onClick={() => handleAddSlide()}
-							style={{ opacity: currentSlide.length > 3 ? 0 : 1 }}>
+							style={{
+								display: currentSlide.length > 3 ? 'none' : 'visible',
+							}}>
 							<GoEllipsis />
 						</button>
 					</div>

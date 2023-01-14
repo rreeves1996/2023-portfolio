@@ -1,11 +1,10 @@
 .about {
 	background: $purpleVeryDark;
 	border-radius: 40px;
-	padding: 1.5rem 2.5rem;
-
+	padding: 2.5rem 0;
 	.title {
 		@include flexRowAlign(center);
-
+		padding-left: 4rem;
 		button {
 			@include flexRowAlign(center);
 			justify-content: center;
@@ -30,7 +29,8 @@
 		justify-content: center;
 
 		height: 100%;
-		margin: 2.5rem auto;
+		margin: 0.5rem auto;
+		padding: 1.5rem 2rem;
 		min-width: 25rem;
 		width: 95%;
 		flex-wrap: wrap;
@@ -47,7 +47,7 @@
 				width: 100%;
 				border-radius: 10px;
 				border: 8px solid $purpleVeryDark;
-
+				outline: 3px solid $greenDark;
 				filter: drop-shadow(1.2rem 1.6rem 0px $purplePrimary);
 			}
 		}
