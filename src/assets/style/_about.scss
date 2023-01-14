@@ -6,9 +6,12 @@
 	.title {
 		@include flexRowAlign(center);
 
-		a {
+		button {
 			@include flexRowAlign(center);
 			justify-content: center;
+			background-color: transparent;
+			border: none;
+			cursor: pointer;
 			font-size: 3.5rem;
 			color: $greenDark;
 			text-decoration: none;
@@ -53,6 +56,7 @@
 			@include flexColumnAlign(center);
 			justify-content: space-between;
 			width: 60%;
+			padding: 0.5rem;
 			flex: 1 1 20rem;
 
 			h1 {
@@ -60,6 +64,7 @@
 				margin: 2rem;
 			}
 			p {
+				margin: 0.5rem;
 				text-indent: 3rem;
 				font-size: 1.8rem !important;
 				font-weight: 200;

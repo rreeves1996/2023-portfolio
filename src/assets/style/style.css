@@ -94,7 +94,7 @@ nav {
   display: flex;
   flex-direction: column;
   height: 35rem;
-  min-height: 81vh;
+  min-height: 80vh;
 }
 .home section {
   display: flex;
@@ -188,11 +188,14 @@ nav {
   flex-direction: row;
   align-items: center;
 }
-.about .title a {
+.about .title button {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
   font-size: 3.5rem;
   color: #41d4b7;
   text-decoration: none;
@@ -200,7 +203,7 @@ nav {
   border-radius: 8px;
   transition: all 150ms;
 }
-.about .title a:hover {
+.about .title button:hover {
   transform: scale(1.1);
   filter: brightness(1.5);
 }
@@ -237,6 +240,7 @@ nav {
   flex-direction: column;
   justify-content: space-between;
   width: 60%;
+  padding: 0.5rem;
   flex: 1 1 20rem;
 }
 .about header .about-text h1 {
@@ -244,6 +248,7 @@ nav {
   margin: 2rem;
 }
 .about header .about-text p {
+  margin: 0.5rem;
   text-indent: 3rem;
   font-size: 1.8rem !important;
   font-weight: 200;

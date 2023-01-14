@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { AiOutlineDoubleRight } from 'react-icons/ai';
 import { HiMagnifyingGlassCircle } from 'react-icons/hi2';
 import { GoEllipsis } from 'react-icons/go';
-
 import portrait from '../../assets/images/me.png';
 
 const SLIDES = [
@@ -30,18 +29,22 @@ export default function About() {
 	const [currentSlide, setCurrentSlide] = useState<React.ReactElement[]>([
 		SLIDES[0],
 	]);
+	const aboutRef = React.useRef<null | HTMLDivElement>(null);
 
 	const handleAddSlide = () => {
 		setCurrentSlide((prevState) => [...prevState, SLIDES[currentSlide.length]]);
 	};
 
+	const handleScrollIntoView = () =>
+		aboutRef.current?.scrollIntoView({ behavior: 'smooth' });
+
 	return (
-		<div className='about'>
+		<div className='about' ref={aboutRef}>
 			<section className='title'>
 				<h2>About me...</h2>
-				<a href='/about'>
+				<button onClick={() => handleScrollIntoView()}>
 					<HiMagnifyingGlassCircle />
-				</a>
+				</button>
 			</section>
 			<header>
 				<div className='img-wrapper'>
