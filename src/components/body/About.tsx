@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { AiOutlineDoubleRight } from 'react-icons/ai';
+import { HiMagnifyingGlassCircle } from 'react-icons/hi2';
 import { GoEllipsis } from 'react-icons/go';
 
 import portrait from '../../assets/images/me.png';
@@ -39,7 +40,7 @@ export default function About() {
 			<section className='title'>
 				<h2>About me...</h2>
 				<a href='/about'>
-					See more <AiOutlineDoubleRight />
+					<HiMagnifyingGlassCircle />
 				</a>
 			</section>
 			<header>
@@ -50,7 +51,9 @@ export default function About() {
 					<h1>Learner, musician, engineer </h1>
 					<div className='about-body'>
 						{currentSlide}
-						<button onClick={() => handleAddSlide()}>
+						<button
+							onClick={() => handleAddSlide()}
+							style={{ opacity: currentSlide.length > 3 ? 0 : 1 }}>
 							<GoEllipsis />
 						</button>
 					</div>
