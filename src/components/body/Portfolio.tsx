@@ -1,7 +1,9 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
+import { FaFolder } from 'react-icons/fa';
 import Carousel from '../misc/Carousel/Carousel';
 import Slide from '../misc/Carousel/Slide';
 import Placeholder from '../../assets/images/placeholder.png';
+import { useScroll } from '../../hooks/useScroll';
 
 interface Project {
 	deployment: string;
@@ -57,11 +59,16 @@ const PROJECTS: Project[] = [
 
 export default function Portfolio() {
 	const [currentSlide, setCurrentSlide] = useState<number>(0);
+	const portfolioRef = React.useRef<null | HTMLDivElement>(null);
+	const { handleScrollIntoView } = useScroll();
 
 	return (
-		<section className='portfolio'>
+		<section className='portfolio page' ref={portfolioRef}>
 			<section className='title'>
 				<h2>Portfolio</h2>
+				<button onClick={() => handleScrollIntoView(portfolioRef)}>
+					<FaFolder />
+				</button>
 			</section>
 			<header className='carousel-container'>
 				<Carousel>

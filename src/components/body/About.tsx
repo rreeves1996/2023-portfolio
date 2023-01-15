@@ -3,6 +3,7 @@ import { AiOutlineDoubleRight } from 'react-icons/ai';
 import { HiMagnifyingGlassCircle } from 'react-icons/hi2';
 import { GoEllipsis } from 'react-icons/go';
 import portrait from '../../assets/images/me.png';
+import { useScroll } from '../../hooks/useScroll';
 
 const SLIDES = [
 	<p>
@@ -30,19 +31,17 @@ export default function About() {
 		SLIDES[0],
 	]);
 	const aboutRef = React.useRef<null | HTMLDivElement>(null);
+	const { handleScrollIntoView } = useScroll();
 
 	const handleAddSlide = () => {
 		setCurrentSlide((prevState) => [...prevState, SLIDES[currentSlide.length]]);
 	};
 
-	const handleScrollIntoView = () =>
-		aboutRef.current?.scrollIntoView({ behavior: 'smooth' });
-
 	return (
-		<section className='about' ref={aboutRef}>
+		<section className='about page' ref={aboutRef}>
 			<section className='title'>
 				<h2>About me...</h2>
-				<button onClick={() => handleScrollIntoView()}>
+				<button onClick={() => handleScrollIntoView(aboutRef)}>
 					<HiMagnifyingGlassCircle />
 				</button>
 			</section>

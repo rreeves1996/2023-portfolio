@@ -1,0 +1,18 @@
+.portfolio {
+	.title {
+		button {
+			margin: 0 2.5rem !important;
+			width: 3.1rem;
+			height: 3.1rem;
+			font-size: 1.8rem;
+			color: $purpleDark;
+			background-color: $greenDark;
+			border-radius: 50%;
+
+			&:hover {
+				filter: none !important;
+				background-color: $greenLight;
+			}
+		}
+	}
+}

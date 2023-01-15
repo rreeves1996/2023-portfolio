@@ -4,6 +4,8 @@
 @import './navbar';
 @import './home';
 @import './about';
+@import './portfolio';
+@import './carousel';
 
 * {
 	margin: 0;
@@ -62,4 +64,26 @@ main {
 footer {
 	width: 100vw;
 	height: 50px;
+}
+.page {
+	padding: 2.5rem 0;
+	.title {
+		@include flexRowAlign(center);
+		padding-left: 4rem;
+		button {
+			@include flexRowAlign(center);
+			justify-content: center;
+			border: none;
+			cursor: pointer;
+
+			text-decoration: none;
+			margin: 0 1rem;
+
+			transition: all 150ms;
+			&:hover {
+				transform: scale(1.1);
+				filter: brightness(1.5);
+			}
+		}
+	}
 }

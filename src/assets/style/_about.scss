@@ -1,27 +1,12 @@
 .about {
 	background: $purpleVeryDark;
 	border-radius: 40px;
-	padding: 2.5rem 0;
+
 	.title {
-		@include flexRowAlign(center);
-		padding-left: 4rem;
 		button {
-			@include flexRowAlign(center);
-			justify-content: center;
-			background-color: transparent;
-			border: none;
-			cursor: pointer;
 			font-size: 3.5rem;
 			color: $greenDark;
-			text-decoration: none;
-			margin: 0 1rem;
-			border-radius: 8px;
-
-			transition: all 150ms;
-			&:hover {
-				transform: scale(1.1);
-				filter: brightness(1.5);
-			}
+			background-color: transparent;
 		}
 	}
 	header {
