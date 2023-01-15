@@ -39,7 +39,7 @@ export default function About() {
 		aboutRef.current?.scrollIntoView({ behavior: 'smooth' });
 
 	return (
-		<div className='about' ref={aboutRef}>
+		<section className='about' ref={aboutRef}>
 			<section className='title'>
 				<h2>About me...</h2>
 				<button onClick={() => handleScrollIntoView()}>
@@ -64,6 +64,6 @@ export default function About() {
 					</div>
 				</div>
 			</header>
-		</div>
+		</section>
 	);
 }
