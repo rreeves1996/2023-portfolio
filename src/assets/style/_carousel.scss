@@ -1,0 +1,27 @@
+.carousel {
+	@include flexCenter();
+
+	margin: 2.5rem 0;
+
+	.slide-container {
+		@include flexCenter();
+		position: relative;
+		overflow: hidden;
+		background-color: $purpleVeryDark;
+		width: 34rem;
+		min-width: 22rem;
+		height: 24rem;
+		border-radius: 0.5rem;
+		padding: 1rem;
+		.slide {
+			@include flexColumnAlign(center);
+			position: absolute;
+			min-width: 20rem;
+
+			img {
+				width: 100%;
+				min-width: 20rem;
+			}
+		}
+	}
+}

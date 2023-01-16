@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { CSSTransition } from 'react-transition-group';
+import { FaCaretLeft, FaCaretRight } from 'react-icons/fa';
 import Slide from './Slide';
 
 type Props = {
@@ -21,19 +22,21 @@ export default function Carousel({
 						? handleChangeSlide(4)
 						: handleChangeSlide(currentSlide - 1)
 				}
-				className='carousel-button'>
-				❬
+				className='carousel-button left-btn'>
+				<FaCaretLeft />
 			</button>
+
+			<div className='slide-container'>{children}</div>
+
 			<button
 				onClick={() =>
 					currentSlide === 4
 						? handleChangeSlide(0)
 						: handleChangeSlide(currentSlide + 1)
 				}
-				className='carousel-button'>
-				❭
+				className='carousel-button right-btn'>
+				<FaCaretRight />
 			</button>
-			<div className='slide-container'>{children}</div>
 		</div>
 	);
 }

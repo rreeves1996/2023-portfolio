@@ -22,7 +22,7 @@
 
 		.img-wrapper {
 			@include flexCenter();
-			flex: 1 1 20rem;
+			flex: 1 1 27rem;
 			max-width: 28rem;
 			margin: 2rem;
 			border-radius: 10px;
@@ -41,10 +41,12 @@
 			@include flexColumnAlign(center);
 			justify-content: space-between;
 			width: 60%;
+			min-width: 27rem;
 			padding: 0.5rem;
 			flex: 1 1 20rem;
 
 			h1 {
+				text-align: center;
 				font-size: 2rem;
 				margin: 2rem;
 			}

@@ -93,7 +93,7 @@ nav {
   position: relative;
   display: flex;
   flex-direction: column;
-  height: 35rem;
+  height: 40rem;
   min-height: 78vh;
 }
 .home section {
@@ -203,7 +203,7 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex: 1 1 20rem;
+  flex: 1 1 27rem;
   max-width: 28rem;
   margin: 2rem;
   border-radius: 10px;
@@ -222,10 +222,12 @@ nav {
   flex-direction: column;
   justify-content: space-between;
   width: 60%;
+  min-width: 27rem;
   padding: 0.5rem;
   flex: 1 1 20rem;
 }
 .about header .about-text h1 {
+  text-align: center;
   font-size: 2rem;
   margin: 2rem;
 }
@@ -291,6 +293,64 @@ nav {
 .portfolio .title button:hover {
   filter: none !important;
   background-color: #5dffd9;
+}
+.portfolio .carousel-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  width: 2.2rem;
+  height: 4rem;
+  border: none;
+  margin: 1rem;
+  border-radius: 0.4rem;
+  color: #412291;
+  background-color: rgba(255, 255, 255, 0.171);
+  font-size: 2.7rem;
+  margin: 1rem;
+  cursor: pointer;
+  transition: all 200ms;
+}
+.portfolio .carousel-button:hover {
+  background-color: rgba(255, 255, 255, 0.26);
+  transform: scale(1.1);
+}
+.portfolio .left-btn svg {
+  transform: translateX(-0.2rem);
+}
+.portfolio .right-btn svg {
+  transform: translateX(0.2rem);
+}
+
+.carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2.5rem 0;
+}
+.carousel .slide-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  background-color: #21114b;
+  width: 34rem;
+  min-width: 22rem;
+  height: 24rem;
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+.carousel .slide-container .slide {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  min-width: 20rem;
+}
+.carousel .slide-container .slide img {
+  width: 100%;
+  min-width: 20rem;
 }
 
 .contact {

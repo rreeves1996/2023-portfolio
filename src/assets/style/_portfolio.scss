@@ -15,4 +15,35 @@
 			}
 		}
 	}
+	.carousel-button {
+		@include flexCenter();
+		cursor: pointer;
+		width: 2.2rem;
+		height: 4rem;
+		border: none;
+		margin: 1rem;
+		border-radius: 0.4rem;
+		color: $purpleDark;
+		background-color: rgba(255, 255, 255, 0.171);
+		font-size: 2.7rem;
+		margin: 1rem;
+		cursor: pointer;
+
+		transition: all 200ms;
+
+		&:hover {
+			background-color: rgba(255, 255, 255, 0.26);
+			transform: scale(1.1);
+		}
+	}
+	.left-btn {
+		svg {
+			transform: translateX(-0.2rem);
+		}
+	}
+	.right-btn {
+		svg {
+			transform: translateX(0.2rem);
+		}
+	}
 }

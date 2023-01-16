@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { FaFolder } from 'react-icons/fa';
 import Carousel from '../misc/Carousel/Carousel';
 import Slide from '../misc/Carousel/Slide';
@@ -63,6 +63,19 @@ export default function Portfolio() {
 	const handleChangeSlide = (slide: number) =>
 		setCurrentSlide((prevState) => slide);
 
+	useEffect(() => {
+		const slides = Array.from(
+			document.getElementsByClassName('slide') as HTMLCollectionOf<HTMLElement>
+		);
+
+		slides.forEach((slide) => {
+			const slideDataID = parseInt(slide.getAttribute('data-id')!);
+			const slidePos = slideDataID - 2;
+
+			slide.style.transform = `translateX(${slidePos * 100}%)`;
+			// slide.style.zIndex = JSON.stringify(2);
+		});
+	});
 	return (
 		<section className='portfolio page'>
 			<section className='title'>
@@ -77,7 +90,11 @@ export default function Portfolio() {
 				<Carousel
 					currentSlide={currentSlide}
 					handleChangeSlide={handleChangeSlide}>
-					<Slide project={PROJECTS[currentSlide]} />
+					<>
+						{PROJECTS.map((project: Project, index: number) => (
+							<Slide project={project} id={index} />
+						))}
+					</>
 				</Carousel>
 			</header>
 			<section className='portfolio-body'>

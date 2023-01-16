@@ -9,11 +9,12 @@ interface SlideProps {
 		subtitle: string;
 		desc: string;
 	};
+	id: number;
 }
 
-export default function Slide({ project }: SlideProps) {
+export default function Slide({ project, id }: SlideProps) {
 	return (
-		<div className='slide'>
+		<div className='slide' data-id={id}>
 			<img src={project.img} alt='slide' />
 			<div className='button-container'>
 				<button onClick={() => (window.location.href = project.deployment)}>
