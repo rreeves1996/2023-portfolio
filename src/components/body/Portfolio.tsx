@@ -60,6 +60,9 @@ const PROJECTS: Project[] = [
 export default function Portfolio() {
 	const [currentSlide, setCurrentSlide] = useState<number>(0);
 
+	const handleChangeSlide = (slide: number) =>
+		setCurrentSlide((prevState) => slide);
+
 	return (
 		<section className='portfolio page'>
 			<section className='title'>
@@ -71,7 +74,9 @@ export default function Portfolio() {
 				</ScrollIntoView>
 			</section>
 			<header className='carousel-container'>
-				<Carousel>
+				<Carousel
+					currentSlide={currentSlide}
+					handleChangeSlide={handleChangeSlide}>
 					<Slide project={PROJECTS[currentSlide]} />
 				</Carousel>
 			</header>
