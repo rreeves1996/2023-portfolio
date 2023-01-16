@@ -1,6 +1,6 @@
 import React from 'react';
-import { RxCaretRight } from 'react-icons/rx';
 import { HiCodeBracketSquare } from 'react-icons/hi2';
+import ScrollIntoView from 'react-scroll-into-view';
 
 export default function Home() {
 	return (
@@ -18,13 +18,17 @@ export default function Home() {
 			</header>
 			<section>
 				<div className='home-menu'>
-					<button className='home-button' id='projects-button'>
-						Projects
-					</button>
+					<ScrollIntoView selector='.portfolio'>
+						<button className='home-button' id='projects-button'>
+							Projects
+						</button>
+					</ScrollIntoView>
 					<div className='divider' />
-					<button className='home-button' id='contact-button'>
-						Contact
-					</button>
+					<ScrollIntoView selector='.contact'>
+						<button className='home-button' id='contact-button'>
+							Contact
+						</button>
+					</ScrollIntoView>
 				</div>
 			</section>
 		</section>

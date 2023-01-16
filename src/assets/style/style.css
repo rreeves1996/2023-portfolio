@@ -293,6 +293,24 @@ nav {
   background-color: #5dffd9;
 }
 
+.contact {
+  background: #21114b;
+  border-radius: 40px;
+}
+.contact .title button {
+  margin: 0 2.5rem !important;
+  width: 3.1rem;
+  height: 3.1rem;
+  font-size: 2.1rem;
+  color: #21114b;
+  background-color: #41d4b7;
+  border-radius: 50%;
+}
+.contact .title button:hover {
+  filter: none !important;
+  background-color: #5dffd9;
+}
+
 * {
   margin: 0;
   padding: 0;
