@@ -60,11 +60,11 @@
 			filter: drop-shadow(4px 4px 0px $greenDark);
 		}
 		p {
-			font-size: 1.5rem;
+			font-size: 1.4rem;
 		}
 		.button-container {
 			@include flexRowAlign(center);
-			margin: 0.5rem auto;
+			margin: 0.8rem auto;
 
 			button {
 				height: 2.2rem;
@@ -83,7 +83,8 @@
 				}
 			}
 			.divider {
-				width: 1px;
+				width: 2.5px;
+				border-radius: 2px;
 				height: 2rem;
 				background-color: $offWhite;
 				margin: 0 0.8rem;

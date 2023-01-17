@@ -341,13 +341,13 @@ nav {
   filter: drop-shadow(4px 4px 0px #41d4b7);
 }
 .portfolio .portfolio-body p {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
 }
 .portfolio .portfolio-body .button-container {
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin: 0.5rem auto;
+  margin: 0.8rem auto;
 }
 .portfolio .portfolio-body .button-container button {
   height: 2.2rem;
@@ -365,7 +365,8 @@ nav {
   background-color: rgba(255, 255, 255, 0.068);
 }
 .portfolio .portfolio-body .button-container .divider {
-  width: 1px;
+  width: 2.5px;
+  border-radius: 2px;
   height: 2rem;
   background-color: #f5f2f5;
   margin: 0 0.8rem;
