@@ -1,6 +1,8 @@
 .about {
+	@include flexColumnJustify(center);
 	background: $purpleVeryDark;
 	border-radius: 40px;
+	height: 95vh;
 
 	.title {
 		button {

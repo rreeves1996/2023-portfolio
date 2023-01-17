@@ -15,7 +15,7 @@ interface Project {
 	img: string;
 	title: string;
 	subtitle: string;
-	desc: string;
+	desc: string[];
 }
 
 const PROJECTS: Project[] = [
@@ -25,7 +25,11 @@ const PROJECTS: Project[] = [
 		img: TECH_BLOG,
 		title: 'Tech Blog',
 		subtitle: 'Handlebars, MySQL, Node',
-		desc: '',
+		desc: [
+			`This is a tech-style blog created using Handlebars.js, MySQL, and Node. It was one of the projects assigned during my coding boot camp.`,
+			`This assignment was one of our first tastes at a full-stack app, as we had just dipped our toes into MVC. The program taught Handlebars.js as a predecessor to teaching React in order to give us a general feel for a front-end freamwork.`,
+			`Creating this app was really enjoyable for me, as it finally felt like I was creating something cohesive with what we had been learning, and it had a potential actual use-case. Though I'll probably never touch Handlebars again, it was super fun to use for this assignment!`,
+		],
 	},
 	{
 		deployment: 'https://rreeves1996.github.io/week6-hw/',
@@ -33,7 +37,10 @@ const PROJECTS: Project[] = [
 		img: WEATHER_API,
 		title: 'Weather Dashboard',
 		subtitle: 'Third-Party API, JavaScript',
-		desc: '',
+		desc: [
+			`A simple weather app that gathers weather information via a third-party API. One of my early boot camp assignments.`,
+			`This was my first project using a third-party API. It also featured a search history list for previously searched locations. Though the app is pretty mediocre and doesn't do anything special, I like to have it in my portfolio as a memorium of my early full-stack development journey :)`,
+		],
 	},
 	{
 		deployment: 'https://teamez.herokuapp.com/',
@@ -41,7 +48,10 @@ const PROJECTS: Project[] = [
 		img: TEAMEZ,
 		title: 'TeamEZ',
 		subtitle: 'React, Redux, MySQL, Node, Express',
-		desc: 'TeamEZ is a full-stack app that I created on my own following my boot camp graduation. I wanted to create a full-stack app from scratch that utilized the MERN stack, so I figured out the features I wanted the app to include and came up with a pseudo-use case. It functions as a team management app to easily keep track of employees and employee info with a UI created by me.',
+		desc: [
+			`TeamEZ is a full-stack app that I created on my own following my boot camp graduation. I wanted to create a full-stack app from scratch that utilized the MERN stack, so I took inspiration from a command-line employee tracker I made in boot camp, expanded on it and its features, and created a full-stack version with my own front-end/UI. It allows the user easily keep track of employees and employee info and features a fully functional login/registration system created with JWT.`,
+			`Creating this app was a massive leap forward in my learning. Though the MERN stack is often-used, I used it with MySQL, and creating it from scratch proved to be difficult. However, having to look up and learn everything I needed for the app gave me a great understanding in how a lot of fundamenetal technologies and methods are used!`,
+		],
 	},
 	{
 		deployment: 'https://rreeves-todo-list.herokuapp.com/',
@@ -49,7 +59,11 @@ const PROJECTS: Project[] = [
 		img: TODO_LIST,
 		title: 'To-Do List',
 		subtitle: 'React, Bootstrap, Node',
-		desc: '',
+		desc: [
+			`My own take on a simple to-do list app! Featuring daily to-do lists for two weeks, and another tab for miscellaneous to-dos.`,
+			`I created this app because I hadn't created a to-do list app yet, and thought I would try tackling it on my own with React. I also wanted to try to create a UI that was sleek, clean, and responsive, but also fast and easy to build. This app gave me the opportunity at creating said UI using bootstrap.`,
+			`Overall, I am happy with how sleek it turned out, UI wise and coding wise. I had enough learning under my belt at this point, especially with React, to make this app pretty easy to tackle functionally. The UI is sleek and was able to be created in a short time-frame. I'm happy with how I was able to reach my goals with this app's creation!`,
+		],
 	},
 	{
 		deployment: 'https://rreeves-virtual-keyboard.herokuapp.com/',
@@ -57,7 +71,10 @@ const PROJECTS: Project[] = [
 		img: VIRTUAL_KEYBOARD,
 		title: 'Virtual Keyboard',
 		subtitle: 'React, Node',
-		desc: '',
+		desc: [
+			'This is a virtual keyboard app, created with React. The user can type with the keyboard on the screen (or their own keyboard) and the text will display in the text box. Pretty simple!',
+			`Coming out of boot camp, I was eager to try to tackle creating something entirely on my own, and I was eager to learn more about React. I ended up looking for simple app ideas to find one I could find and create that was easy/simple enough for me to create fresh out of boot camp, but hard enough to challenge me in certain aspects and give me some sort of growth, if not the experience creating the app itself.`,
+		],
 	},
 ];
 
@@ -121,7 +138,9 @@ export default function Portfolio() {
 						Repository
 					</button>
 				</div>
-				<p>{PROJECTS[currentSlide].desc}</p>
+				{PROJECTS[currentSlide].desc.map((p) => (
+					<p>{p}</p>
+				))}
 			</section>
 		</section>
 	);

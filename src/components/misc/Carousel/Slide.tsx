@@ -7,7 +7,7 @@ interface SlideProps {
 		img: string;
 		title: string;
 		subtitle: string;
-		desc: string;
+		desc: string[];
 	};
 	id: number;
 }

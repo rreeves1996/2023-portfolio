@@ -1,5 +1,6 @@
 .portfolio {
 	justify-content: flex-start;
+	min-height: 97vh;
 
 	.title {
 		button {
@@ -61,6 +62,8 @@
 		}
 		p {
 			font-size: 1.4rem;
+			text-align: left;
+			text-indent: 2rem;
 		}
 		.button-container {
 			@include flexRowAlign(center);

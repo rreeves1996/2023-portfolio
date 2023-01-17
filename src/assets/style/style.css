@@ -94,7 +94,7 @@ nav {
   display: flex;
   flex-direction: column;
   height: 40rem;
-  min-height: 78vh;
+  min-height: 79vh;
 }
 .home section {
   display: flex;
@@ -181,8 +181,12 @@ nav {
 }
 
 .about {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
   background: #21114b;
   border-radius: 40px;
+  height: 95vh;
 }
 .about .title button {
   font-size: 3.5rem;
@@ -286,6 +290,7 @@ nav {
 }
 .portfolio {
   justify-content: flex-start;
+  min-height: 97vh;
 }
 .portfolio .title button {
   margin: 0 2.5rem !important;
@@ -343,6 +348,8 @@ nav {
 }
 .portfolio .portfolio-body p {
   font-size: 1.4rem;
+  text-align: left;
+  text-indent: 2rem;
 }
 .portfolio .portfolio-body .button-container {
   display: flex;
@@ -422,6 +429,7 @@ nav {
 .contact {
   background: #21114b;
   border-radius: 40px;
+  height: 91vh;
 }
 .contact .title button {
   margin: 0 2.5rem !important;
@@ -435,6 +443,16 @@ nav {
 .contact .title button:hover {
   filter: none !important;
   background-color: #5dffd9;
+}
+.contact header h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 4rem 0;
+  font-size: 10rem;
+  font-weight: 100;
+  text-shadow: 2px 2px 0px #41d4b7;
 }
 
 * {

@@ -1,7 +1,7 @@
 .contact {
 	background: $purpleVeryDark;
 	border-radius: 40px;
-
+	height: 91vh;
 	.title {
 		button {
 			margin: 0 2.5rem !important;
@@ -16,6 +16,16 @@
 				filter: none !important;
 				background-color: $greenLight;
 			}
+		}
+	}
+	header {
+		h2 {
+			@include flexCenter();
+			width: 100%;
+			margin: 4rem 0;
+			font-size: 10rem;
+			font-weight: 100;
+			text-shadow: 2px 2px 0px $greenDark;
 		}
 	}
 }

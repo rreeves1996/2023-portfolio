@@ -1,8 +1,28 @@
-import React, { useRef } from 'react';
+import React, { useState } from 'react';
 import { HiMail } from 'react-icons/hi';
 import ScrollIntoView from 'react-scroll-into-view';
 
 export default function Contact() {
+	const [formState, setFormState] = useState({
+		name: '',
+		email: '',
+		subject: '',
+		message: '',
+	});
+
+	const handleChange = (event: any) => {
+		const { name, value } = event.target;
+
+		setFormState({
+			...formState,
+			[name]: value,
+		});
+	};
+	const handleFormSubmit = (event: any) => {
+		event.preventDefault();
+
+		window.location.reload();
+	};
 	return (
 		<section className='contact page'>
 			<section className='title'>
@@ -13,6 +33,39 @@ export default function Contact() {
 					</button>
 				</ScrollIntoView>
 			</section>
+			<header>
+				<h2>Say hi. :)</h2>
+			</header>
+			<form className='form-container' onSubmit={handleFormSubmit}>
+				<div className='name-email'>
+					<div className='field'>
+						<label className='label'>Name:</label>
+						<div className='control'>
+							<input
+								className='input'
+								type='text'
+								name='name'
+								placeholder='Your name'
+								value={formState.name}
+								onChange={handleChange}
+							/>
+						</div>
+					</div>
+					<div className='field'>
+						<label className='label'>Email:</label>
+						<div className='control'>
+							<input
+								className='input'
+								type='email'
+								name='email'
+								placeholder='Your email'
+								value={formState.email}
+								onChange={handleChange}
+							/>
+						</div>
+					</div>
+				</div>
+			</form>
 		</section>
 	);
 }
