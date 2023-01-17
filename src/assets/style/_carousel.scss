@@ -1,7 +1,7 @@
 .carousel {
 	@include flexCenter();
 
-	margin: 2.5rem 0;
+	margin: 4rem 0 1rem;
 
 	.slide-container {
 		@include flexCenter();
@@ -13,14 +13,31 @@
 		height: 24rem;
 		border-radius: 0.5rem;
 		padding: 1rem;
+
+		&::after {
+			content: '';
+			min-width: 120%;
+			height: 100%;
+			background-color: $purpleVeryDark;
+			z-index: 2;
+		}
 		.slide {
 			@include flexColumnAlign(center);
 			position: absolute;
 			min-width: 20rem;
+			padding: 0 1rem;
+			cursor: pointer;
+			filter: drop-shadow(5px 5px 2px rgba(0, 0, 0, 0.603));
 
+			transition: all 200ms, transform 450ms;
 			img {
+				border-radius: 6px;
 				width: 100%;
 				min-width: 20rem;
+			}
+
+			&:hover {
+				filter: drop-shadow(5px 5px 2px rgba(0, 0, 0, 0.603)) brightness(1.1);
 			}
 		}
 	}

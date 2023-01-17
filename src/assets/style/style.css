@@ -111,10 +111,12 @@ nav {
 }
 .home header {
   display: flex;
+  margin: auto;
   flex-direction: column;
   font-size: 200%;
   padding-top: 13%;
   filter: drop-shadow(0px 0px 100px rgba(255, 255, 255, 0.178));
+  width: 90%;
 }
 .home header code {
   display: flex;
@@ -151,7 +153,7 @@ nav {
 .home .home-button {
   width: 8rem;
   height: 3.5rem;
-  margin: 2rem;
+  margin: 5rem 2rem;
   background: transparent;
   color: #5dffd9;
   border: 3px solid #5dffd9;
@@ -281,6 +283,9 @@ nav {
     top: 0px;
   }
 }
+.portfolio {
+  justify-content: flex-start;
+}
 .portfolio .title button {
   margin: 0 2.5rem !important;
   width: 3.1rem;
@@ -321,12 +326,55 @@ nav {
 .portfolio .right-btn svg {
   transform: translateX(0.2rem);
 }
+.portfolio .portfolio-body {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 60%;
+  text-align: center;
+  margin: auto;
+}
+.portfolio .portfolio-body h1 {
+  font-size: 3.5rem;
+  margin: 0.5rem 0 1rem;
+  filter: drop-shadow(4px 4px 0px #41d4b7);
+}
+.portfolio .portfolio-body p {
+  font-size: 1.5rem;
+}
+.portfolio .portfolio-body .button-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0.5rem auto;
+}
+.portfolio .portfolio-body .button-container button {
+  height: 2.2rem;
+  width: 6rem;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  background-color: transparent;
+  color: #41d4b7;
+  font-weight: 500;
+  letter-spacing: 0.6px;
+  transition: all 150ms;
+}
+.portfolio .portfolio-body .button-container button:hover {
+  background-color: rgba(255, 255, 255, 0.068);
+}
+.portfolio .portfolio-body .button-container .divider {
+  width: 1px;
+  height: 2rem;
+  background-color: #f5f2f5;
+  margin: 0 0.8rem;
+}
 
 .carousel {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 2.5rem 0;
+  margin: 4rem 0 1rem;
 }
 .carousel .slide-container {
   display: flex;
@@ -341,16 +389,31 @@ nav {
   border-radius: 0.5rem;
   padding: 1rem;
 }
+.carousel .slide-container::after {
+  content: "";
+  min-width: 120%;
+  height: 100%;
+  background-color: #21114b;
+  z-index: 2;
+}
 .carousel .slide-container .slide {
   display: flex;
   align-items: center;
   flex-direction: column;
   position: absolute;
   min-width: 20rem;
+  padding: 0 1rem;
+  cursor: pointer;
+  filter: drop-shadow(5px 5px 2px rgba(0, 0, 0, 0.603));
+  transition: all 200ms, transform 450ms;
 }
 .carousel .slide-container .slide img {
+  border-radius: 6px;
   width: 100%;
   min-width: 20rem;
+}
+.carousel .slide-container .slide:hover {
+  filter: drop-shadow(5px 5px 2px rgba(0, 0, 0, 0.603)) brightness(1.1);
 }
 
 .contact {
@@ -465,4 +528,13 @@ footer {
 .page .title button:hover {
   transform: scale(1.1);
   filter: brightness(1.5);
+}
+.page .title::after {
+  content: "";
+  position: absolute;
+  width: 28rem;
+  height: 0.3rem;
+  transform: translate(-0.5rem, 1050%);
+  border-radius: 3px;
+  background-color: #f5f2f5;
 }/*# sourceMappingURL=style.css.map */

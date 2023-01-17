@@ -14,14 +14,62 @@ export default function Carousel({
 	currentSlide,
 	handleChangeSlide,
 }: Props) {
+	const handleSlideLeft = () => {
+		const slides = Array.from(
+			document.getElementsByClassName('slide') as HTMLCollectionOf<HTMLElement>
+		);
+
+		slides.forEach((slide) => {
+			const slideDataID = parseInt(slide.getAttribute('data-id')!);
+			let slidePos = slideDataID - 2;
+
+			slidePos--;
+			if (slidePos < -2) {
+				slide.style.transform = `translateX(${slidePos * 100 + 500}%)`;
+				slide.setAttribute('data-id', '4');
+				slide.style.zIndex = '0';
+			} else {
+				slide.style.transform = `translateX(${slidePos * 100}%)`;
+				slide.setAttribute('data-id', JSON.stringify(slidePos + 2));
+				slide.style.zIndex = '3';
+			}
+		});
+
+		currentSlide === 4
+			? handleChangeSlide(0)
+			: handleChangeSlide(currentSlide + 1);
+	};
+
+	const handleSlideRight = () => {
+		const slides = Array.from(
+			document.getElementsByClassName('slide') as HTMLCollectionOf<HTMLElement>
+		);
+
+		slides.forEach((slide) => {
+			const slideDataID = parseInt(slide.getAttribute('data-id')!);
+			let slidePos = slideDataID - 2;
+
+			slidePos++;
+			if (slidePos > 2) {
+				slide.style.transform = `translateX(${slidePos * 100 - 500}%)`;
+				slide.setAttribute('data-id', '0');
+				slide.style.zIndex = '0';
+			} else {
+				slide.style.transform = `translateX(${slidePos * 100}%)`;
+				slide.setAttribute('data-id', JSON.stringify(slidePos + 2));
+				slide.style.zIndex = '3';
+			}
+		});
+
+		currentSlide === 0
+			? handleChangeSlide(4)
+			: handleChangeSlide(currentSlide - 1);
+	};
+
 	return (
 		<div className='carousel'>
 			<button
-				onClick={() =>
-					currentSlide === 0
-						? handleChangeSlide(4)
-						: handleChangeSlide(currentSlide - 1)
-				}
+				onClick={() => handleSlideRight()}
 				className='carousel-button left-btn'>
 				<FaCaretLeft />
 			</button>
@@ -29,11 +77,7 @@ export default function Carousel({
 			<div className='slide-container'>{children}</div>
 
 			<button
-				onClick={() =>
-					currentSlide === 4
-						? handleChangeSlide(0)
-						: handleChangeSlide(currentSlide + 1)
-				}
+				onClick={() => handleSlideLeft()}
 				className='carousel-button right-btn'>
 				<FaCaretRight />
 			</button>
