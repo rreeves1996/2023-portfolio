@@ -38,7 +38,7 @@ export default function Contact() {
 			</header>
 			<form className='form-container' onSubmit={handleFormSubmit}>
 				<div className='name-email'>
-					<div className='field'>
+					<div className='field name-field'>
 						<label className='label'>Name:</label>
 						<div className='control'>
 							<input
@@ -51,7 +51,7 @@ export default function Contact() {
 							/>
 						</div>
 					</div>
-					<div className='field'>
+					<div className='field email-field'>
 						<label className='label'>Email:</label>
 						<div className='control'>
 							<input
@@ -64,6 +64,29 @@ export default function Contact() {
 							/>
 						</div>
 					</div>
+				</div>
+				<div className='subject'>
+					<div className='field subject-field'>
+						<label className='label'>Subject:</label>
+						<div className='control'>
+							<input
+								className='input'
+								type='text'
+								name='subject'
+								placeholder='Subject'
+								value={formState.subject}
+								onChange={handleChange}
+							/>
+						</div>
+					</div>
+				</div>
+				<div className='body'>
+					<textarea
+						id='message-box'
+						className='message-box'
+						autoComplete='off'
+						placeholder='Be nice...'
+					/>
 				</div>
 			</form>
 		</section>

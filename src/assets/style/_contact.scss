@@ -1,7 +1,7 @@
 .contact {
 	background: $purpleVeryDark;
 	border-radius: 40px;
-	height: 91vh;
+	min-height: 91vh;
 	.title {
 		button {
 			margin: 0 2.5rem !important;
@@ -26,6 +26,19 @@
 			font-size: 10rem;
 			font-weight: 100;
 			text-shadow: 2px 2px 0px $greenDark;
+		}
+	}
+	.form-container {
+		@include flexColumnAlign(center);
+		width: 70%;
+		margin: auto;
+		div {
+			@include flexRowAlign(center);
+
+			.field {
+				@include flexColumnJustify(space-between);
+				align-items: unset;
+			}
 		}
 	}
 }

@@ -186,7 +186,7 @@ nav {
   flex-direction: column;
   background: #21114b;
   border-radius: 40px;
-  height: 95vh;
+  min-height: 95vh;
 }
 .about .title button {
   font-size: 3.5rem;
@@ -429,7 +429,7 @@ nav {
 .contact {
   background: #21114b;
   border-radius: 40px;
-  height: 91vh;
+  min-height: 91vh;
 }
 .contact .title button {
   margin: 0 2.5rem !important;
@@ -453,6 +453,24 @@ nav {
   font-size: 10rem;
   font-weight: 100;
   text-shadow: 2px 2px 0px #41d4b7;
+}
+.contact .form-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 70%;
+  margin: auto;
+}
+.contact .form-container div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.contact .form-container div .field {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: unset;
 }
 
 * {
