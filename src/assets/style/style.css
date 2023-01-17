@@ -331,6 +331,7 @@ nav {
   align-items: center;
   flex-direction: column;
   width: 60%;
+  min-width: 25rem;
   text-align: center;
   margin: auto;
 }
