@@ -84,42 +84,12 @@
 	}
 }
 
-@-webkit-keyframes float {
-	0% {
-		top: 0px;
-	}
-
-	50% {
-		top: 5px;
-	}
-
-	100% {
-		top: 0px;
-	}
-}
-@-moz-keyframes float {
-	0% {
-		top: 0px;
-	}
-
-	50% {
-		top: 5px;
-	}
-
-	100% {
-		top: 0px;
-	}
-}
-@keyframes float {
-	0% {
-		top: 0px;
-	}
-
-	50% {
-		top: 5px;
-	}
-
-	100% {
-		top: 0px;
+@media screen and (max-width: 768px) {
+	.about {
+		.title {
+			&::after {
+				width: 22.5rem !important;
+			}
+		}
 	}
 }

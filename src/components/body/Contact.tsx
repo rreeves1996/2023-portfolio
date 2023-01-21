@@ -80,13 +80,17 @@ export default function Contact() {
 						</div>
 					</div>
 				</div>
-				<div className='body'>
-					<textarea
-						id='message-box'
-						className='message-box'
-						autoComplete='off'
-						placeholder='Be nice...'
-					/>
+				<div className='field body-field'>
+					<label className='label'>Message:</label>
+
+					<div className='control'>
+						<textarea
+							id='message-box'
+							className='message-box'
+							autoComplete='off'
+							placeholder='Be nice...'
+						/>
+					</div>
 				</div>
 			</form>
 		</section>

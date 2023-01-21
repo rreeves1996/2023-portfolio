@@ -99,3 +99,11 @@ footer {
 		}
 	}
 }
+
+@media screen and (max-width: 768px) {
+	.title {
+		&::after {
+			width: 20rem !important;
+		}
+	}
+}

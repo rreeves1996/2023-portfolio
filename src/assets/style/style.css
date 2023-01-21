@@ -266,26 +266,9 @@ nav {
   font-size: 6.5rem;
 }
 
-@-webkit-keyframes float {
-  0% {
-    top: 0px;
-  }
-  50% {
-    top: 5px;
-  }
-  100% {
-    top: 0px;
-  }
-}
-@keyframes float {
-  0% {
-    top: 0px;
-  }
-  50% {
-    top: 5px;
-  }
-  100% {
-    top: 0px;
+@media screen and (max-width: 768px) {
+  .about .title::after {
+    width: 22.5rem !important;
   }
 }
 .portfolio {
@@ -336,7 +319,7 @@ nav {
   display: flex;
   align-items: center;
   flex-direction: column;
-  width: 60%;
+  width: 65%;
   min-width: 25rem;
   text-align: center;
   margin: auto;
@@ -426,6 +409,11 @@ nav {
   filter: drop-shadow(5px 5px 2px rgba(0, 0, 0, 0.603)) brightness(1.1);
 }
 
+@media screen and (max-width: 668px) {
+  .slide-container {
+    height: 18rem !important;
+  }
+}
 .contact {
   background: #21114b;
   border-radius: 40px;
@@ -458,21 +446,66 @@ nav {
   display: flex;
   align-items: center;
   flex-direction: column;
-  width: 70%;
+  width: 60%;
   margin: auto;
 }
 .contact .form-container div {
   display: flex;
   flex-direction: row;
   align-items: center;
+  width: 100%;
 }
 .contact .form-container div .field {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
   align-items: unset;
+  width: 50%;
+}
+.contact .form-container div .field .label {
+  width: 100%;
+}
+.contact .form-container div .field input {
+  width: 100%;
+  margin: 0.5rem;
+  height: 1.5rem;
+  font-family: "Roboto";
+  text-indent: 0.2rem;
+  border-radius: 3px;
+  border: none;
+}
+.contact .form-container div .field input:focus {
+  outline: 2px solid #5f37ce;
+}
+.contact .form-container .subject .field {
+  width: 100%;
+}
+.contact .form-container .body-field {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.contact .form-container .body-field textarea {
+  margin: 0.5rem;
+  width: 100%;
+  height: 10rem;
+  font-family: "Roboto";
+  padding: 0.2rem 0.3rem;
+  border-radius: 3px;
+  border: none;
+}
+.contact .form-container .body-field textarea:focus {
+  outline: 2px solid #5f37ce;
 }
 
+@media screen and (max-width: 768px) {
+  .contact .title::after {
+    width: 19rem !important;
+  }
+  .contact header h2 {
+    font-size: 7rem;
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -576,4 +609,10 @@ footer {
   transform: translate(-0.5rem, 1050%);
   border-radius: 3px;
   background-color: #f5f2f5;
+}
+
+@media screen and (max-width: 768px) {
+  .title::after {
+    width: 20rem !important;
+  }
 }/*# sourceMappingURL=style.css.map */
