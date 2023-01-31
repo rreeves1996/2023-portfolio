@@ -261,7 +261,7 @@ nav .nav-burger {
   flex-direction: column;
   background: #21114b;
   border-radius: 40px;
-  max-height: 80vh !important;
+  min-height: 85vh !important;
 }
 .about .title {
   display: flex;
