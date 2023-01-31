@@ -2,7 +2,7 @@
 	@include flexColumnJustify(flex-start);
 	background: $purpleVeryDark;
 	border-radius: 40px;
-	min-height: 95vh;
+	max-height: 80vh !important;
 
 	.title {
 		display: flex;
@@ -88,7 +88,7 @@
 				.p-section {
 					opacity: 0;
 
-					transition: all 200ms;
+					transition: all 500ms;
 				}
 			}
 		}

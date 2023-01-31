@@ -261,7 +261,7 @@ nav .nav-burger {
   flex-direction: column;
   background: #21114b;
   border-radius: 40px;
-  min-height: 95vh;
+  max-height: 80vh !important;
 }
 .about .title {
   display: flex;
@@ -349,7 +349,7 @@ nav .nav-burger {
 }
 .about header .about-text .about-body .p-section {
   opacity: 0;
-  transition: all 200ms;
+  transition: all 500ms;
 }
 
 @media screen and (max-width: 768px) {
