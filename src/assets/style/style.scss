@@ -99,6 +99,9 @@ footer {
 	}
 }
 
+footer {
+	@include flexCenter();
+}
 @media screen and (max-width: 768px) {
 	.title {
 		&::after {

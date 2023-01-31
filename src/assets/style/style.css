@@ -699,6 +699,12 @@ footer {
   background-color: #f5f2f5;
 }
 
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 @media screen and (max-width: 768px) {
   .title::after {
     width: 20rem !important;
