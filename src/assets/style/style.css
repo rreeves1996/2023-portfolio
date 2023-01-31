@@ -86,7 +86,81 @@ nav {
   align-items: center;
   padding: 0.5rem calc((100vw - 1350px) / 2);
   width: 100vw;
-  height: 80px;
+  height: 5.5rem;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  position: fixed;
+  z-index: 5;
+}
+nav::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 5.5rem;
+  opacity: 0.8;
+  background-color: #21114b;
+}
+nav .logo {
+  cursor: pointer;
+  z-index: 1;
+  transition: all 250ms;
+}
+nav .logo h2 {
+  border: 2px solid #41d4b7;
+  border-radius: 3px;
+  border-bottom: none;
+  font-size: 3.8rem;
+  font-weight: 100;
+  letter-spacing: 5px;
+  padding: 0 0.8rem 0.2rem 1rem;
+  transition: all 250ms;
+}
+nav .logo h3 {
+  transform: translateX(9.7rem);
+  position: absolute;
+  font-family: "Roboto";
+  font-size: 0.9rem;
+  margin-top: -0.6rem;
+  letter-spacing: 0.5px;
+}
+nav .logo h3::before {
+  position: absolute;
+  left: -154px;
+  top: 8px;
+  content: "";
+  width: 150px;
+  height: 2px;
+  background-color: #41d4b7;
+  transition: all 250ms;
+}
+nav .logo h3::after {
+  position: absolute;
+  right: -17px;
+  top: 8px;
+  content: "";
+  width: 13px;
+  height: 2px;
+  background-color: #41d4b7;
+  transition: all 250ms;
+}
+nav .logo:hover {
+  filter: drop-shadow(0px 0px 3px rgba(255, 255, 255, 0.24));
+}
+nav .logo:hover h2 {
+  border: 2px solid #5dffd9;
+  border-bottom: none;
+  color: white;
+}
+nav .logo:hover h3::before {
+  background-color: #5dffd9;
+}
+nav .logo:hover h3::after {
+  background-color: #5dffd9;
+}
+nav .nav-burger {
+  z-index: 1;
 }
 
 .home {
@@ -95,6 +169,7 @@ nav {
   flex-direction: column;
   height: 40rem;
   min-height: 79vh;
+  margin-top: 5rem;
 }
 .home section {
   display: flex;
@@ -263,16 +338,26 @@ nav {
   font-size: 6rem;
   margin: 1rem;
   cursor: pointer;
-  transition: all 200ms;
+  transition: all 200ms, transform 400ms;
 }
 .about header .about-text button:hover {
   color: rgba(255, 255, 255, 0.26);
   font-size: 6.5rem;
 }
+.about header .about-text .about-body {
+  transition: height 300ms ease-in-out;
+}
+.about header .about-text .about-body .p-section {
+  opacity: 0;
+  transition: all 200ms;
+}
 
 @media screen and (max-width: 768px) {
   .about .title::after {
     width: 22.5rem !important;
+  }
+  .about .about-text button {
+    margin-top: -165px !important;
   }
 }
 .portfolio {
@@ -569,7 +654,6 @@ body {
   overflow-x: hidden;
   background: #412291;
   color: #f5f2f5;
-  padding: 0 1rem;
 }
 
 main {

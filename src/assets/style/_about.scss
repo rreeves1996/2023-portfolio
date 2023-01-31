@@ -75,11 +75,20 @@
 				margin: 1rem;
 				cursor: pointer;
 
-				transition: all 200ms;
+				transition: all 200ms, transform 400ms;
 
 				&:hover {
 					color: rgba(255, 255, 255, 0.26);
 					font-size: 6.5rem;
+				}
+			}
+			.about-body {
+				transition: height 300ms ease-in-out;
+
+				.p-section {
+					opacity: 0;
+
+					transition: all 200ms;
 				}
 			}
 		}
@@ -91,6 +100,11 @@
 		.title {
 			&::after {
 				width: 22.5rem !important;
+			}
+		}
+		.about-text {
+			button {
+				margin-top: -165px !important;
 			}
 		}
 	}

@@ -4,35 +4,39 @@ import { HiMagnifyingGlassCircle } from 'react-icons/hi2';
 import { GoEllipsis } from 'react-icons/go';
 import portrait from '../../assets/images/me.png';
 import ScrollIntoView from 'react-scroll-into-view';
+import useWindowDimensions from '../../hooks/useWindowDimensions';
 
 const SLIDES = [
-	<p>
+	<p className='p-section' style={{ opacity: '1' }}>
 		<strong>
 			Born in 1996 in Seattle, Washington, my biggest interests in life have
 			always been in music and tech.{' '}
 		</strong>
 	</p>,
-	<p>
+	<p className='p-section'>
 		I am grateful to say that I've built my life in a way where I now have the
 		opportunity to be involved with both heavily day-to-day!
 	</p>,
-	<p>
+	<p className='p-section'>
 		Since graduating my Full-Stack Development boot camp on September 17th, I've
 		narrowed my focus into Front-End Development, primarily React.
 	</p>,
-	<p>
+	<p className='p-section'>
 		Today, I play with rocks and bricks by day and program by night, eagerly
 		awaiting my first position in Front-End Development. 🗿
 	</p>,
 ];
 
 export default function About() {
-	const [currentSlide, setCurrentSlide] = useState<React.ReactElement[]>([
-		SLIDES[0],
-	]);
+	const { height, width } = useWindowDimensions();
+	const [currentSlide, setCurrentSlide] = useState<number>(1);
 
 	const handleAddSlide = () => {
-		setCurrentSlide((prevState) => [...prevState, SLIDES[currentSlide.length]]);
+		const sections: NodeListOf<HTMLElement> =
+			document.querySelectorAll('.p-section');
+
+		sections[currentSlide].style.opacity = '1';
+		setCurrentSlide((prevState) => currentSlide + 1);
 	};
 
 	return (
@@ -51,12 +55,23 @@ export default function About() {
 				</div>
 				<div className='about-text'>
 					<h1>Learner, musician, engineer </h1>
-					<div className='about-body'>
-						{currentSlide}
+					<div
+						className='about-body'
+						style={{
+							height:
+								width >= 768
+									? `${80 + 80 * currentSlide}px`
+									: `${80 + 130 * currentSlide}px`,
+						}}>
+						{SLIDES.map((slide) => slide)}
 						<button
 							onClick={() => handleAddSlide()}
 							style={{
-								display: currentSlide.length > 3 ? 'none' : 'visible',
+								opacity: currentSlide > 3 ? 0 : 1,
+								transform:
+									width >= 768
+										? `translateY(${-320 + 80 * currentSlide}px)`
+										: `translateY(${-410 + 145 * currentSlide}px)`,
 							}}>
 							<GoEllipsis />
 						</button>

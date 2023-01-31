@@ -57,7 +57,6 @@ body {
 	overflow-x: hidden;
 	background: $purpleDark;
 	color: $offWhite;
-	padding: 0 1rem;
 }
 main {
 	@include layoutPadding(1350px);
