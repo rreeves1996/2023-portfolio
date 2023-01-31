@@ -6,7 +6,7 @@ import TEAMEZ from '../../assets/images/teamez.png';
 import TODO_LIST from '../../assets/images/todo.png';
 import VIRTUAL_KEYBOARD from '../../assets/images/keyboard.png';
 import TECH_BLOG from '../../assets/images/blog.png';
-import WEATHER_API from '../../assets/images/weatherapi.png';
+import WEATHER_API from '../../assets/images/weather.png';
 import ScrollIntoView from 'react-scroll-into-view';
 
 interface Project {
@@ -31,17 +31,7 @@ const PROJECTS: Project[] = [
 			`Creating this app was really enjoyable for me, as it finally felt like I was creating something cohesive with what we had been learning, and it had a potential actual use-case. Though I'll probably never touch Handlebars again, it was super fun to use for this assignment!`,
 		],
 	},
-	{
-		deployment: 'https://rreeves1996.github.io/week6-hw/',
-		github: 'https://github.com/rreeves1996/week6-hw',
-		img: WEATHER_API,
-		title: 'Weather Dashboard',
-		subtitle: 'Third-Party API, JavaScript',
-		desc: [
-			`A simple weather app that gathers weather information via a third-party API. One of my early boot camp assignments.`,
-			`This was my first project using a third-party API. It also featured a search history list for previously searched locations. Though the app is pretty mediocre and doesn't do anything special, I like to have it in my portfolio as a memorium of my early full-stack development journey :)`,
-		],
-	},
+
 	{
 		deployment: 'https://teamez.herokuapp.com/',
 		github: 'https://github.com/rreeves1996/team-manager',
@@ -51,6 +41,18 @@ const PROJECTS: Project[] = [
 		desc: [
 			`TeamEZ is a full-stack app that I created on my own following my boot camp graduation. I wanted to create a full-stack app from scratch that utilized the MERN stack, so I took inspiration from a command-line employee tracker I made in boot camp, expanded on it and its features, and created a full-stack version with my own front-end/UI. It allows the user easily keep track of employees and employee info and features a fully functional login/registration system created with JWT.`,
 			`Creating this app was a massive leap forward in my learning. Though the MERN stack is often-used, I used it with MySQL, and creating it from scratch proved to be difficult. However, having to look up and learn everything I needed for the app gave me a great understanding in how a lot of fundamenetal technologies and methods are used!`,
+		],
+	},
+	{
+		deployment: 'https://weather-gsepxpyo4-rreeves1996.vercel.app/',
+		github: 'https://github.com/rreeves1996/weather-api',
+		img: WEATHER_API,
+		title: 'Weather Dashboard',
+		subtitle: 'React, SASS, Node',
+		desc: [
+			`A simple weather app that I created on my own with React after my boot camp graduation.`,
+			`I created a weather app early on in my bootcamp with plain JavaScript, so I was interested to see how creating one on my own would go after learning a lot more, and learning React. I wanted a sleek UI that was easy to interact with but also nice to look at.`,
+			`I was able to learn a lot about keeping my code condensed and simple in this app, as most of the functionality could be accomplished with fewer lines of code, and it felt important to me to try and keep the complexity down. I am overall happy with what came of the app, and feel like I hit all of my goals I set out to accomplish before its creation!`,
 		],
 	},
 	{
