@@ -15,12 +15,11 @@
 	}
 	header {
 		@include flexRowAlign(center);
-		justify-content: center;
+		justify-content: space-between;
 
 		height: 100%;
 		margin: auto;
-		padding: 1.5rem 2rem;
-		min-width: 25rem;
+		padding: 1.5rem 0;
 		width: 95%;
 		flex-wrap: wrap;
 
@@ -44,8 +43,10 @@
 		.about-text {
 			@include flexColumnAlign(center);
 			justify-content: space-between;
+			margin: 0 auto;
 			width: 60%;
-			min-width: 27rem;
+			max-width: 40rem;
+			min-width: 24rem;
 			padding: 0.5rem;
 			flex: 1 1 20rem;
 			text-align: center;

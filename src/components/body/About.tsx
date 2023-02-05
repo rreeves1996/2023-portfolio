@@ -7,21 +7,21 @@ import ScrollIntoView from 'react-scroll-into-view';
 import useWindowDimensions from '../../hooks/useWindowDimensions';
 
 const SLIDES = [
-	<p className='p-section' style={{ opacity: '1' }}>
+	<p className='p-section' style={{ opacity: '1', marginBottom: '1.5rem' }}>
 		<strong>
 			Born in 1996 in Seattle, Washington, my biggest interests in life have
-			always been in music and tech.{' '}
+			always been in music and tech.
 		</strong>
 	</p>,
-	<p className='p-section'>
+	<p className='p-section' style={{ margin: '0 auto', textAlign: 'left' }}>
 		I am grateful to say that I've built my life in a way where I now have the
 		opportunity to be involved with both heavily day-to-day!
 	</p>,
-	<p className='p-section'>
+	<p className='p-section' style={{ margin: '0 auto', textAlign: 'left' }}>
 		Since graduating my Full-Stack Development boot camp on September 17th, I've
 		narrowed my focus into Front-End Development, primarily React.
 	</p>,
-	<p className='p-section'>
+	<p className='p-section' style={{ margin: '0 auto', textAlign: 'left' }}>
 		Today, I play with rocks and bricks by day and program by night, eagerly
 		awaiting my first position in Front-End Development. 🗿
 	</p>,
@@ -61,7 +61,7 @@ export default function About() {
 							height:
 								width >= 768
 									? `${80 + 80 * currentSlide}px`
-									: `${80 + 130 * currentSlide}px`,
+									: `${40 + 130 * currentSlide}px`,
 						}}>
 						{SLIDES.map((slide) => slide)}
 						<button
@@ -71,7 +71,7 @@ export default function About() {
 								transform:
 									width >= 768
 										? `translateY(${-320 + 80 * currentSlide}px)`
-										: `translateY(${-410 + 145 * currentSlide}px)`,
+										: `translateY(${-350 + 140 * currentSlide}px)`,
 							}}>
 							<GoEllipsis />
 						</button>
