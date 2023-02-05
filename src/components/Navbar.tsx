@@ -10,7 +10,7 @@ export default function Navbar() {
 				<h2>rreeves</h2>
 				<h3>dev</h3>
 			</div>
-			<div
+			{/* <div
 				className='nav-burger'
 				onMouseEnter={() => setIsHovered(true)}
 				onMouseLeave={() => setIsHovered(false)}>
@@ -44,6 +44,9 @@ export default function Navbar() {
 						</button>
 					</ScrollIntoView>
 				</div>
+			</div> */}
+			<div>
+				<h6>(site still under construction!)</h6>
 			</div>
 		</nav>
 	);

@@ -5,6 +5,7 @@
 	height: 40rem;
 	min-height: 79vh;
 	margin-top: 5rem;
+	
 	section {
 		@include flexRowAlign(flex-end);
 

@@ -1,8 +1,10 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { HiCodeBracketSquare } from 'react-icons/hi2';
 import ScrollIntoView from 'react-scroll-into-view';
 
 export default function Home() {
+	const [hovered, setHovered] = useState(false);
+
 	return (
 		<section className='home'>
 			<header>
