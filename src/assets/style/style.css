@@ -529,15 +529,97 @@ nav .nav-burger {
   filter: none !important;
   background-color: #5dffd9;
 }
-.contact header h2 {
+.contact header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 4rem;
+  flex-wrap: wrap;
+}
+.contact header .left-side {
+  flex: 0 1 23.5rem;
+  border-right: 2px solid #11a2d2;
+  padding: 1rem 2rem;
+}
+.contact header .left-side .picture-and-social-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+}
+.contact header .left-side .picture-and-social-container img {
+  width: 75%;
+  max-width: 14rem;
+  border-radius: 50%;
+}
+.contact header .left-side .picture-and-social-container .contact-button-container {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+}
+.contact header .left-side .picture-and-social-container .contact-button-container .social-button {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  margin: 4rem 0;
-  font-size: 10rem;
+  background-color: #11a2d2;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #21114b;
+  width: 45px;
+  height: 45px;
+  outline: none;
+  border: none;
+  border-radius: 50%;
+  margin: 1rem 0.3rem;
+  transition: all 100ms;
+}
+.contact header .left-side .picture-and-social-container .contact-button-container .social-button:hover {
+  transform: scale(1.15);
+  background-color: #6bbeda;
+}
+.contact header .left-side .picture-and-social-container .contact-button-container .github-button {
+  background-color: transparent;
+  color: #11a2d2;
+  width: 45px;
+  font-size: 2.8rem;
+}
+.contact header .left-side .picture-and-social-container .contact-button-container .github-button:hover {
+  transform: scale(1.1);
+  background-color: transparent;
+  color: #6bbeda;
+}
+.contact header .left-side h2 {
+  width: 19.4rem;
+  padding: 0.5rem 1.2rem;
+  margin: 1.5rem 0;
+  font-size: 4rem;
+  font-weight: 500;
+  letter-spacing: 3px;
+  border: 2px solid #11a2d2;
+  border-radius: 6px;
+}
+.contact header .left-side h5 {
+  position: absolute;
+  font-size: 1.3rem;
+  font-family: "Alumni Sans Pinstripe";
   font-weight: 100;
-  text-shadow: 2px 2px 0px #41d4b7;
+  letter-spacing: -0.5px;
+  text-transform: uppercase;
+  transform: translate(9.8rem, -2.2rem);
+  background-color: #21114b;
+  padding: 0 0.3rem;
+}
+.contact header .right-side {
+  flex: 1 1 25rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 25rem;
+  width: 25rem;
+  padding: 0 2rem;
 }
 .contact .form-container {
   display: flex;

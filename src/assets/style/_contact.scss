@@ -19,13 +19,95 @@
 		}
 	}
 	header {
-		h2 {
-			@include flexCenter();
-			width: 100%;
-			margin: 4rem 0;
-			font-size: 10rem;
-			font-weight: 100;
-			text-shadow: 2px 2px 0px $greenDark;
+		@include flexRowJustify(center);
+		margin-top: 4rem;
+		flex-wrap: wrap;
+
+		.left-side {
+			flex: 0 1 23.5rem;
+			border-right: 2px solid $aquaDark;
+			padding: 1rem 2rem;
+			.picture-and-social-container {
+				@include flexRowAlign(center);
+				width: 100%;
+
+				img {
+					width: 75%;
+					max-width: 14rem;
+					border-radius: 50%;
+				}
+
+				.contact-button-container {
+					@include flexColumnAlign(flex-end);
+					justify-content: space-between;
+					width: 100%;
+					height: 100%;
+
+					.social-button {
+						@include flexCenter();
+						background-color: $aquaDark;
+						font-size: 2rem;
+						cursor: pointer;
+						color: $purpleVeryDark;
+						width: 45px;
+						height: 45px;
+						outline: none;
+						border: none;
+						border-radius: 50%;
+						margin: 1rem 0.3rem;
+
+						transition: all 100ms;
+
+						&:hover {
+							transform: scale(1.15);
+							background-color: #6bbeda;
+						}
+					}
+					.github-button {
+						background-color: transparent;
+						color: $aquaDark;
+						width: 45px;
+						font-size: 2.8rem;
+
+						&:hover {
+							transform: scale(1.1);
+							background-color: transparent;
+							color: #6bbeda;
+						}
+					}
+				}
+			}
+
+			h2 {
+				width: 19.4rem;
+				padding: 0.5rem 1.2rem;
+				margin: 1.5rem 0;
+				font-size: 4rem;
+				font-weight: 500;
+				letter-spacing: 3px;
+				border: 2px solid $aquaDark;
+				border-radius: 6px;
+			}
+			h5 {
+				position: absolute;
+				font-size: 1.3rem;
+				font-family: $accentText2;
+				font-weight: 100;
+				letter-spacing: -0.5px;
+				text-transform: uppercase;
+				transform: translate(9.8rem, -2.2rem);
+				background-color: $purpleVeryDark;
+				padding: 0 0.3rem;
+			}
+		}
+
+		.right-side {
+			flex: 1 1 25rem;
+			@include flexColumnJustify(center);
+			max-width: 25rem;
+			width: 25rem;
+
+			padding: 0 2rem;
 		}
 	}
 	.form-container {
