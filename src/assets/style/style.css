@@ -512,9 +512,12 @@ nav .nav-burger {
   }
 }
 .contact {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
   background: #21114b;
   border-radius: 40px;
-  min-height: 91vh;
+  min-height: 65vh;
 }
 .contact .title button {
   margin: 0 2.5rem !important;
@@ -531,9 +534,9 @@ nav .nav-burger {
 }
 .contact header {
   display: flex;
-  flex-direction: row;
   justify-content: center;
-  margin-top: 4rem;
+  align-items: center;
+  height: 100%;
   flex-wrap: wrap;
 }
 .contact header .left-side {

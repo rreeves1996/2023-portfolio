@@ -1,7 +1,8 @@
 .contact {
+	@include flexColumnJustify(space-between);
 	background: $purpleVeryDark;
 	border-radius: 40px;
-	min-height: 91vh;
+	min-height: 65vh;
 	.title {
 		button {
 			margin: 0 2.5rem !important;
@@ -19,8 +20,8 @@
 		}
 	}
 	header {
-		@include flexRowJustify(center);
-		margin-top: 4rem;
+		@include flexCenter();
+		height: 100%;
 		flex-wrap: wrap;
 
 		.left-side {
