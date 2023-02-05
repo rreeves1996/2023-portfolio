@@ -354,7 +354,8 @@ nav .nav-burger {
 
 @media screen and (max-width: 768px) {
   .about .title::after {
-    width: 22.5rem !important;
+    width: 17.5rem !important;
+    transform: translate(-0.2rem, 900%) !important;
   }
   .about .about-text button {
     margin-top: -165px !important;
@@ -452,6 +453,12 @@ nav .nav-burger {
   margin: 0 0.8rem;
 }
 
+@media screen and (max-width: 768px) {
+  .portfolio .title::after {
+    width: 13.7rem !important;
+    transform: translate(-0.2rem, 900%) !important;
+  }
+}
 .carousel {
   display: flex;
   justify-content: center;
@@ -589,7 +596,8 @@ nav .nav-burger {
 
 @media screen and (max-width: 768px) {
   .contact .title::after {
-    width: 19rem !important;
+    width: 13rem !important;
+    transform: translate(-0.2rem, 900%) !important;
   }
   .contact header h2 {
     font-size: 7rem;
@@ -706,6 +714,17 @@ footer {
 }
 
 @media screen and (max-width: 768px) {
+  .title {
+    padding-left: 2rem !important;
+  }
+  .title h2 {
+    width: 100%;
+  }
+  .title div {
+    position: absolute;
+    right: 0;
+    transform: translateY(-2rem);
+  }
   .title::after {
     width: 20rem !important;
   }

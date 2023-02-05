@@ -104,6 +104,15 @@ footer {
 }
 @media screen and (max-width: 768px) {
 	.title {
+		padding-left: 2rem !important;
+		h2 {
+			width: 100%;
+		}
+		div {
+			position: absolute;
+			right: 0;
+			transform: translateY(-2rem);
+		}
 		&::after {
 			width: 20rem !important;
 		}

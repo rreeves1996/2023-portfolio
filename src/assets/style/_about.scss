@@ -99,7 +99,8 @@
 	.about {
 		.title {
 			&::after {
-				width: 22.5rem !important;
+				width: 17.5rem !important;
+				transform: translate(-0.2rem, 900%) !important;
 			}
 		}
 		.about-text {

@@ -96,4 +96,13 @@
 	}
 }
 
-
+@media screen and (max-width: 768px) {
+	.portfolio {
+		.title {
+			&::after {
+				width: 13.7rem !important;
+				transform: translate(-0.2rem, 900%) !important;
+			}
+		}
+	}
+}

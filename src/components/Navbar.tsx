@@ -1,15 +1,23 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import ScrollIntoView from 'react-scroll-into-view';
 
 export default function Navbar() {
+	const [isHovered, setIsHovered] = useState(false);
+
 	return (
 		<nav>
 			<div className='logo'>
 				<h2>rreeves</h2>
 				<h3>dev</h3>
 			</div>
-			<div className='nav-burger'>
-				<div className='nav-link-container'>
+			<div
+				className='nav-burger'
+				onMouseEnter={() => setIsHovered(true)}
+				onMouseLeave={() => setIsHovered(false)}>
+				<div
+					className={
+						isHovered ? 'nav-link-container hover' : 'nav-link-container'
+					}>
 					<ScrollIntoView selector='.home'>
 						<button className='nav-button' id='home-link'>
 							Home
