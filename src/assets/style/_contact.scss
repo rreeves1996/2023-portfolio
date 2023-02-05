@@ -2,7 +2,7 @@
 	@include flexColumnJustify(space-between);
 	background: $purpleVeryDark;
 	border-radius: 40px;
-	min-height: 65vh;
+	min-height: 61vh;
 	.title {
 		button {
 			margin: 0 2.5rem !important;
@@ -28,6 +28,7 @@
 			flex: 0 1 23.5rem;
 			border-right: 2px solid $aquaDark;
 			padding: 1rem 2rem;
+
 			.picture-and-social-container {
 				@include flexRowAlign(center);
 				width: 100%;
@@ -96,9 +97,9 @@
 				font-weight: 100;
 				letter-spacing: -0.5px;
 				text-transform: uppercase;
-				transform: translate(9.8rem, -2.2rem);
+				transform: translate(12.5rem, -2.2rem);
 				background-color: $purpleVeryDark;
-				padding: 0 0.3rem;
+				padding: 0 0.2rem;
 			}
 		}
 

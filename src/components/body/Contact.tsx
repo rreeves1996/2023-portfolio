@@ -20,11 +20,13 @@ export default function Contact() {
 			[name]: value,
 		});
 	};
+
 	const handleFormSubmit = (event: any) => {
 		event.preventDefault();
 
 		window.location.reload();
 	};
+
 	return (
 		<section className='contact page'>
 			<section className='title'>
@@ -59,7 +61,7 @@ export default function Contact() {
 
 					<div className='text-box'>
 						<h2>Ryan Reeves</h2>
-						<h5>Front-End Developer</h5>
+						<h5>Web Developer</h5>
 					</div>
 				</section>
 				<section className='right-side'>

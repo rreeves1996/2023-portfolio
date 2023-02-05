@@ -91,6 +91,19 @@ nav {
           backdrop-filter: blur(5px);
   position: fixed;
   z-index: 5;
+  /* Position and sizing of burger button */
+  /* Color/shape of burger icon bars */
+  /* Color/shape of burger icon bars on hover*/
+  /* Position and sizing of clickable cross button */
+  /* Color/shape of close button cross */
+  /*
+  Sidebar wrapper styles
+  Note: Beware of modifying this element as it can break the animations - you should not need to touch it in most cases
+  */
+  /* General sidebar styles */
+  /* Wrapper for item list */
+  /* Individual item */
+  /* Styling of overlay */
 }
 nav::before {
   position: absolute;
@@ -159,8 +172,88 @@ nav .logo:hover h3::before {
 nav .logo:hover h3::after {
   background-color: #5dffd9;
 }
-nav .nav-burger {
-  z-index: 1;
+nav .resume-button {
+  margin-left: auto;
+  margin-right: 72px;
+  z-index: 5;
+  cursor: pointer;
+  font-size: 1rem;
+  letter-spacing: 2px;
+  color: #41d4b7;
+  border: none;
+  border-radius: 6px;
+  background-color: rgba(255, 255, 255, 0.055);
+  padding: 0.8rem 1rem;
+  transition: all 200ms;
+}
+nav .resume-button:hover {
+  background-color: rgba(255, 255, 255, 0.144);
+}
+nav header {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+nav .nav-button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+  margin: 0.7rem;
+}
+nav .nav-button svg {
+  font-size: 1.5rem;
+  color: #11a2d2;
+}
+nav .nav-button h6 {
+  font-size: 1.3rem;
+  text-decoration: underline;
+  margin-left: 1rem;
+  letter-spacing: 1px;
+}
+nav .bm-burger-button {
+  position: relative;
+  width: 36px;
+  height: 30px;
+  right: 44px;
+}
+nav .bm-burger-bars {
+  background: #41d4b7;
+  transition: all 100ms;
+}
+nav .bm-burger-bars-hover {
+  background: #5dffd9;
+}
+nav .bm-cross-button {
+  height: 24px;
+  width: 24px;
+  margin-right: 16px;
+}
+nav .bm-cross {
+  background: #bdc3c7;
+}
+nav .bm-menu-wrap {
+  position: fixed;
+  height: 100vh !important;
+  top: 0;
+}
+nav .bm-menu {
+  background: #21114b;
+  font-size: 1.15em;
+  height: 100vh !important;
+}
+nav .bm-item-list {
+  color: #ffffff;
+  padding: 0.8em;
+}
+nav .bm-item-list a {
+  text-decoration: none;
+}
+nav .bm-item {
+  display: inline-block;
+}
+nav .bm-overlay {
+  background: rgba(0, 0, 0, 0.3);
+  opacity: 0 !important;
 }
 
 .home {
@@ -517,7 +610,7 @@ nav .nav-burger {
   flex-direction: column;
   background: #21114b;
   border-radius: 40px;
-  min-height: 65vh;
+  min-height: 61vh;
 }
 .contact .title button {
   margin: 0 2.5rem !important;
@@ -611,9 +704,9 @@ nav .nav-burger {
   font-weight: 100;
   letter-spacing: -0.5px;
   text-transform: uppercase;
-  transform: translate(9.8rem, -2.2rem);
+  transform: translate(12.5rem, -2.2rem);
   background-color: #21114b;
-  padding: 0 0.3rem;
+  padding: 0 0.2rem;
 }
 .contact header .right-side {
   flex: 1 1 25rem;

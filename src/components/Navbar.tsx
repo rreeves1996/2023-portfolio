@@ -1,9 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
+import { slide as Menu } from 'react-burger-menu';
 import ScrollIntoView from 'react-scroll-into-view';
+import { FaUser, FaFolder } from 'react-icons/fa';
+import { IoHome } from 'react-icons/io5';
+import { HiMail } from 'react-icons/hi';
 
 export default function Navbar() {
-	const [isHovered, setIsHovered] = useState(false);
-
 	return (
 		<nav>
 			<div className='logo'>
@@ -45,9 +47,39 @@ export default function Navbar() {
 					</ScrollIntoView>
 				</div>
 			</div> */}
-			<div>
+			{/* <div>
 				<h6>(site still under construction!)</h6>
-			</div>
+			</div> */}
+			<button className='resume-button'>Resume</button>
+			<Menu itemListElement='div' disableAutoFocus right>
+				<header>
+					<h3>Navigation</h3>
+				</header>
+				<ScrollIntoView selector='.home'>
+					<div className='nav-button' id='home-link'>
+						<IoHome />
+						<h6>Home</h6>
+					</div>
+				</ScrollIntoView>
+				<ScrollIntoView selector='.about'>
+					<div className='nav-button' id='about-link'>
+						<FaUser />
+						<h6>About</h6>
+					</div>
+				</ScrollIntoView>
+				<ScrollIntoView selector='.portfolio'>
+					<div className='nav-button' id='projects-link'>
+						<FaFolder />
+						<h6>Projects</h6>
+					</div>
+				</ScrollIntoView>
+				<ScrollIntoView selector='.contact'>
+					<div className='nav-button' id='contact-link'>
+						<HiMail />
+						<h6>Contact</h6>
+					</div>
+				</ScrollIntoView>
+			</Menu>
 		</nav>
 	);
 }
