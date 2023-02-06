@@ -26,7 +26,7 @@
 
 		.left-side {
 			flex: 0 1 23.5rem;
-			border-right: 2px solid $aquaDark;
+			border-right: 2px solid $offWhite;
 			padding: 1rem 2rem;
 
 			.picture-and-social-container {
@@ -47,18 +47,18 @@
 
 					.social-button {
 						@include flexCenter();
-						background-color: $aquaDark;
+						background-color: $purplePrimary;
 						font-size: 2rem;
 						cursor: pointer;
 						color: $purpleVeryDark;
-						width: 45px;
-						height: 45px;
+						width: 46px;
+						height: 46px;
 						outline: none;
 						border: none;
 						border-radius: 50%;
 						margin: 1rem 0.3rem;
 
-						transition: all 100ms;
+						transition: all 200ms;
 
 						&:hover {
 							transform: scale(1.15);
@@ -67,9 +67,9 @@
 					}
 					.github-button {
 						background-color: transparent;
-						color: $aquaDark;
-						width: 45px;
-						font-size: 2.8rem;
+						color: $purplePrimary;
+						width: 46px;
+						font-size: 2.85rem;
 
 						&:hover {
 							transform: scale(1.1);
@@ -87,7 +87,7 @@
 				font-size: 4rem;
 				font-weight: 500;
 				letter-spacing: 3px;
-				border: 2px solid $aquaDark;
+				border: 2px solid $aquaLight;
 				border-radius: 6px;
 			}
 			h5 {

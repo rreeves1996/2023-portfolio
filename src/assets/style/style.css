@@ -348,6 +348,15 @@ nav .bm-overlay {
   background: rgba(255, 255, 255, 0.151);
 }
 
+@media screen and (max-width: 768px) {
+  .home header {
+    padding: 1rem 1rem;
+  }
+  .home header h1 {
+    font-size: 4.5rem;
+    padding: 0 1rem;
+  }
+}
 .about {
   display: flex;
   justify-content: flex-start;
@@ -355,6 +364,7 @@ nav .bm-overlay {
   background: #21114b;
   border-radius: 40px;
   min-height: 85vh !important;
+  padding: 2.5rem 1.5rem;
 }
 .about .title {
   display: flex;
@@ -372,7 +382,6 @@ nav .bm-overlay {
   justify-content: space-between;
   height: 100%;
   margin: auto;
-  padding: 1.5rem 0;
   width: 95%;
   flex-wrap: wrap;
 }
@@ -401,7 +410,7 @@ nav .bm-overlay {
   margin: 0 auto;
   width: 60%;
   max-width: 40rem;
-  min-width: 24rem;
+  min-width: 23rem;
   padding: 0.5rem;
   flex: 1 1 20rem;
   text-align: center;
@@ -439,6 +448,7 @@ nav .bm-overlay {
   font-size: 6.5rem;
 }
 .about header .about-text .about-body {
+  max-height: 670px;
   transition: height 300ms ease-in-out;
 }
 .about header .about-text .about-body .p-section {
@@ -634,7 +644,7 @@ nav .bm-overlay {
 }
 .contact header .left-side {
   flex: 0 1 23.5rem;
-  border-right: 2px solid #11a2d2;
+  border-right: 2px solid #f5f2f5;
   padding: 1rem 2rem;
 }
 .contact header .left-side .picture-and-social-container {
@@ -660,17 +670,17 @@ nav .bm-overlay {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #11a2d2;
+  background-color: #5f37ce;
   font-size: 2rem;
   cursor: pointer;
   color: #21114b;
-  width: 45px;
-  height: 45px;
+  width: 46px;
+  height: 46px;
   outline: none;
   border: none;
   border-radius: 50%;
   margin: 1rem 0.3rem;
-  transition: all 100ms;
+  transition: all 200ms;
 }
 .contact header .left-side .picture-and-social-container .contact-button-container .social-button:hover {
   transform: scale(1.15);
@@ -678,9 +688,9 @@ nav .bm-overlay {
 }
 .contact header .left-side .picture-and-social-container .contact-button-container .github-button {
   background-color: transparent;
-  color: #11a2d2;
-  width: 45px;
-  font-size: 2.8rem;
+  color: #5f37ce;
+  width: 46px;
+  font-size: 2.85rem;
 }
 .contact header .left-side .picture-and-social-container .contact-button-container .github-button:hover {
   transform: scale(1.1);
@@ -694,7 +704,7 @@ nav .bm-overlay {
   font-size: 4rem;
   font-weight: 500;
   letter-spacing: 3px;
-  border: 2px solid #11a2d2;
+  border: 2px solid #10c3cf;
   border-radius: 6px;
 }
 .contact header .left-side h5 {

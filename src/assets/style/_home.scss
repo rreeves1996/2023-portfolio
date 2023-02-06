@@ -5,7 +5,7 @@
 	height: 40rem;
 	min-height: 79vh;
 	margin-top: 5rem;
-	
+
 	section {
 		@include flexRowAlign(flex-end);
 
@@ -95,6 +95,18 @@
 		background: rgba(255, 255, 255, 0.103);
 		&:hover {
 			background: rgba(255, 255, 255, 0.151);
+		}
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.home {
+		header {
+			padding: 1rem 1rem;
+			h1 {
+				font-size: 4.5rem;
+				padding: 0 1rem;
+			}
 		}
 	}
 }

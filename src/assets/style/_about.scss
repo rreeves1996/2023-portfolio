@@ -3,6 +3,7 @@
 	background: $purpleVeryDark;
 	border-radius: 40px;
 	min-height: 85vh !important;
+	padding: 2.5rem 1.5rem;
 
 	.title {
 		display: flex;
@@ -19,7 +20,6 @@
 
 		height: 100%;
 		margin: auto;
-		padding: 1.5rem 0;
 		width: 95%;
 		flex-wrap: wrap;
 
@@ -46,7 +46,7 @@
 			margin: 0 auto;
 			width: 60%;
 			max-width: 40rem;
-			min-width: 24rem;
+			min-width: 23rem;
 			padding: 0.5rem;
 			flex: 1 1 20rem;
 			text-align: center;
@@ -84,6 +84,7 @@
 				}
 			}
 			.about-body {
+				max-height: 670px;
 				transition: height 300ms ease-in-out;
 
 				.p-section {
