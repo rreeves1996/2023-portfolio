@@ -113,6 +113,7 @@ nav {
 		@include flexRowAlign(center);
 		cursor: pointer;
 		height: 3.5rem;
+
 		padding-left: 1rem;
 		transition: all 200ms;
 		svg {

@@ -2,8 +2,8 @@ import React from 'react';
 import { useNavigate, Link, useLocation } from 'react-router-dom';
 import { slide as Menu } from 'react-burger-menu';
 import ScrollIntoView from 'react-scroll-into-view';
-import { FaUser, FaFolder } from 'react-icons/fa';
-import { IoHome } from 'react-icons/io5';
+import { FaUser, FaFolder, FaArrowAltCircleUp, FaHome } from 'react-icons/fa';
+import { TiArrowUpThick } from 'react-icons/ti';
 import { HiMail } from 'react-icons/hi';
 
 export default function Navbar() {
@@ -11,10 +11,11 @@ export default function Navbar() {
 	const location = useLocation();
 	return (
 		<nav>
-			<div className='logo'>
+			<div className='logo' onClick={() => navigate('/')}>
 				<h2>rreeves</h2>
 				<h3>dev</h3>
 			</div>
+
 			<button
 				className='resume-button'
 				onClick={() =>
@@ -26,17 +27,24 @@ export default function Navbar() {
 				<header>
 					<h3>Navigation</h3>
 				</header>
-				<ScrollIntoView selector='.home'>
-					<div
-						className='nav-button'
-						id='home-link'
-						onClick={() => {
-							if (location.pathname === '/resume') navigate('/');
-						}}>
-						<IoHome />
-						<h6>Home</h6>
-					</div>
-				</ScrollIntoView>
+				{location.pathname === '/resume' ? (
+					<ScrollIntoView selector='.home'>
+						<div
+							className='nav-button'
+							id='home-link'
+							onClick={() => navigate('/')}>
+							<FaHome />
+							<h6>Home</h6>
+						</div>
+					</ScrollIntoView>
+				) : (
+					<ScrollIntoView selector='.home'>
+						<div className='nav-button'>
+							<FaArrowAltCircleUp />
+							<h6>Back to top</h6>
+						</div>
+					</ScrollIntoView>
+				)}
 				{location.pathname === '/' ? (
 					<>
 						<ScrollIntoView selector='.about'>
