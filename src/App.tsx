@@ -1,21 +1,35 @@
-import React, { useState } from 'react';
+import React from 'react';
+import {
+	BrowserRouter as Router,
+	Routes,
+	Route,
+	useLocation,
+} from 'react-router-dom';
+import { TransitionGroup, CSSTransition } from 'react-transition-group';
 import Footer from './components/Footer';
 import Navbar from './components/Navbar';
+import Resume from './components/body/Resume';
+import HomeContainer from './components/body/HomeContainer';
 import './assets/style/style.css';
-import Home from './components/body/Home';
-import About from './components/body/About';
-import Portfolio from './components/body/Portfolio';
-import Contact from './components/body/Contact';
 
 function App() {
+	const location = useLocation();
+
 	return (
 		<>
 			<Navbar />
 			<main>
-				<Home />
-				<About />
-				<Portfolio />
-				<Contact />
+				<TransitionGroup>
+					<CSSTransition
+						timeout={2000}
+						classNames='fade'
+						key={location.pathname}>
+						<Routes location={location}>
+							<Route path='/' element={<HomeContainer />} />
+							<Route path='/resume' element={<Resume />} />
+						</Routes>
+					</CSSTransition>
+				</TransitionGroup>
 			</main>
 			<Footer />
 		</>
