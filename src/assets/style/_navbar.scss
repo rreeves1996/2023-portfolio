@@ -112,18 +112,23 @@ nav {
 	.nav-button {
 		@include flexRowAlign(center);
 		cursor: pointer;
-		margin: 0.7rem;
-
+		height: 3.5rem;
+		padding-left: 1rem;
+		transition: all 200ms;
 		svg {
-			font-size: 1.5rem;
-			color: $aquaDark;
+			font-size: 2rem;
+			color: $aquaLight;
 		}
 
 		h6 {
-			font-size: 1.3rem;
-			text-decoration: underline;
+			font-family: $accentText2;
+			border-bottom: 2px solid $offWhite;
+			font-size: 2rem;
 			margin-left: 1rem;
 			letter-spacing: 1px;
+		}
+		&:hover {
+			background-color: #bdc3c70c;
 		}
 	}
 	/* Position and sizing of burger button */
@@ -177,7 +182,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
 	/* Wrapper for item list */
 	.bm-item-list {
 		color: #ffffff;
-		padding: 0.8em;
+		padding: 0.8em 0;
 
 		a {
 			text-decoration: none;

@@ -198,17 +198,23 @@ nav .nav-button {
   flex-direction: row;
   align-items: center;
   cursor: pointer;
-  margin: 0.7rem;
+  height: 3.5rem;
+  padding-left: 1rem;
+  transition: all 200ms;
 }
 nav .nav-button svg {
-  font-size: 1.5rem;
-  color: #11a2d2;
+  font-size: 2rem;
+  color: #10c3cf;
 }
 nav .nav-button h6 {
-  font-size: 1.3rem;
-  text-decoration: underline;
+  font-family: "Alumni Sans Pinstripe";
+  border-bottom: 2px solid #f5f2f5;
+  font-size: 2rem;
   margin-left: 1rem;
   letter-spacing: 1px;
+}
+nav .nav-button:hover {
+  background-color: rgba(189, 195, 199, 0.0470588235);
 }
 nav .bm-burger-button {
   position: relative;
@@ -243,7 +249,7 @@ nav .bm-menu {
 }
 nav .bm-item-list {
   color: #ffffff;
-  padding: 0.8em;
+  padding: 0.8em 0;
 }
 nav .bm-item-list a {
   text-decoration: none;
@@ -622,6 +628,9 @@ nav .bm-overlay {
   border-radius: 40px;
   min-height: 61vh;
 }
+.contact .title {
+  margin-bottom: 4rem;
+}
 .contact .title button {
   margin: 0 2.5rem !important;
   width: 3.1rem;
@@ -732,7 +741,18 @@ nav .bm-overlay {
   align-items: center;
   flex-direction: column;
   width: 60%;
-  margin: auto;
+  margin: 2rem auto;
+  min-height: 320px;
+  height: 320px;
+  opacity: 1;
+  transition: transform 800ms, opacity 400ms 200ms, min-height 400ms, height 400ms;
+}
+.contact .form-container.hidden {
+  opacity: 0 !important;
+  transform: translateY(-2rem);
+  height: 0 !important;
+  min-height: 0 !important;
+  transition: transform 400ms, opacity 200ms, min-height 200ms, height 200ms;
 }
 .contact .form-container div {
   display: flex;
@@ -781,6 +801,23 @@ nav .bm-overlay {
 }
 .contact .form-container .body-field textarea:focus {
   outline: 2px solid #5f37ce;
+}
+.contact .form-container .submit-btn {
+  cursor: pointer;
+  background-color: #5f37ce;
+  padding: 0.8rem 1rem;
+  margin: 0.5rem;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  border: none;
+  border-radius: 6px;
+  color: rgb(18, 9, 24);
+  transition: all 200ms;
+}
+.contact .form-container .submit-btn:hover {
+  background-color: #6bbeda;
+  color: #412291;
 }
 
 @media screen and (max-width: 768px) {

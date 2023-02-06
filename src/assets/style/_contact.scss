@@ -4,6 +4,7 @@
 	border-radius: 40px;
 	min-height: 61vh;
 	.title {
+		margin-bottom: 4rem;
 		button {
 			margin: 0 2.5rem !important;
 			width: 3.1rem;
@@ -115,8 +116,20 @@
 	.form-container {
 		@include flexColumnAlign(center);
 		width: 60%;
-		margin: auto;
+		margin: 2rem auto;
+		min-height: 320px;
+		height: 320px;
+		opacity: 1;
+		transition: transform 800ms, opacity 400ms 200ms, min-height 400ms,
+			height 400ms;
 
+		&.hidden {
+			opacity: 0 !important;
+			transform: translateY(-2rem);
+			height: 0 !important;
+			min-height: 0 !important;
+			transition: transform 400ms, opacity 200ms, min-height 200ms, height 200ms;
+		}
 		div {
 			@include flexRowAlign(center);
 			width: 100%;
@@ -160,6 +173,24 @@
 				&:focus {
 					outline: 2px solid $purplePrimary;
 				}
+			}
+		}
+		.submit-btn {
+			cursor: pointer;
+			background-color: $purplePrimary;
+			padding: 0.8rem 1rem;
+			margin: 0.5rem;
+			font-size: 1rem;
+			font-weight: 700;
+			letter-spacing: 1px;
+			border: none;
+			border-radius: 6px;
+			color: rgb(18, 9, 24);
+
+			transition: all 200ms;
+			&:hover {
+				background-color: #6bbeda;
+				color: $purpleDark;
 			}
 		}
 	}

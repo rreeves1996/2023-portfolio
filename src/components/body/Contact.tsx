@@ -5,6 +5,7 @@ import { FaLinkedinIn } from 'react-icons/fa';
 import ScrollIntoView from 'react-scroll-into-view';
 
 export default function Contact() {
+	const [displayed, setDisplayed] = useState(false);
 	const [formState, setFormState] = useState({
 		name: '',
 		email: '',
@@ -47,12 +48,16 @@ export default function Contact() {
 						/>
 
 						<div className='contact-button-container'>
-							<button className='social-button'>
+							<button
+								className='social-button'
+								onClick={() => setDisplayed(!displayed)}>
 								<HiMail />
 							</button>
-							<button className='social-button github-button'>
-								<VscGithubInverted />
-							</button>
+							<a href='https://github.com/rreeves1996'>
+								<button className='social-button github-button'>
+									<VscGithubInverted />
+								</button>
+							</a>
 							<button className='social-button'>
 								<FaLinkedinIn />
 							</button>
@@ -92,7 +97,9 @@ export default function Contact() {
 					</h4>
 				</section>
 			</header>
-			{/* <form className='form-container' onSubmit={handleFormSubmit}>
+			<form
+				className={displayed ? 'form-container' : 'form-container hidden'}
+				onSubmit={handleFormSubmit}>
 				<div className='name-email'>
 					<div className='field name-field'>
 						<label className='label'>Name:</label>
@@ -148,7 +155,10 @@ export default function Contact() {
 						/>
 					</div>
 				</div>
-			</form> */}
+				<button type='submit' className='submit-btn'>
+					Submit
+				</button>
+			</form>
 		</section>
 	);
 }
