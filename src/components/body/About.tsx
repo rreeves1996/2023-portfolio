@@ -15,15 +15,15 @@ const SLIDES = [
 	</p>,
 	<p className='p-section' style={{ margin: '0 auto', textAlign: 'left' }}>
 		I am grateful to say that I've built my life in a way where I now have the
-		opportunity to be involved with both heavily day-to-day!
+		opportunity to be involved with both heavily everyday!
 	</p>,
 	<p className='p-section' style={{ margin: '0 auto', textAlign: 'left' }}>
 		Since graduating my Full-Stack Development boot camp on September 17th, I've
 		narrowed my focus into Front-End Development, primarily React.
 	</p>,
 	<p className='p-section' style={{ margin: '0 auto', textAlign: 'left' }}>
-		Today, I play with rocks and bricks by day and program by night, eagerly
-		awaiting my first position in Front-End Development. 🗿
+		Today, I do masonry by day and program/learn by night, eagerly awaiting my
+		first position in Front-End Development. 🗿
 	</p>,
 ];
 
