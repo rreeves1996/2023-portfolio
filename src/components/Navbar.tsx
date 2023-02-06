@@ -5,14 +5,17 @@ import ScrollIntoView from 'react-scroll-into-view';
 import { FaUser, FaFolder, FaArrowAltCircleUp, FaHome } from 'react-icons/fa';
 import { TiArrowUpThick } from 'react-icons/ti';
 import { HiMail } from 'react-icons/hi';
+import useWindowDimensions from '../hooks/useWindowDimensions';
 
 export default function Navbar() {
+	const { height, width } = useWindowDimensions();
 	const navigate = useNavigate();
 	const location = useLocation();
+
 	return (
 		<nav>
 			<div className='logo' onClick={() => navigate('/')}>
-				<h2>rreeves</h2>
+				<h2>{width >= 768 ? 'rreeves' : 'RR'}</h2>
 				<h3>dev</h3>
 			</div>
 

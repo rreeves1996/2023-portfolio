@@ -262,6 +262,34 @@ nav .bm-overlay {
   opacity: 0 !important;
 }
 
+@media screen and (max-width: 768px) {
+  .logo {
+    transform: scale(0.8);
+    margin-left: 0.5rem;
+  }
+  .logo h2 {
+    border-radius: 5px !important;
+  }
+  .logo h3 {
+    transform: translateX(3.7rem) !important;
+  }
+  .logo h3::before {
+    left: -56px !important;
+    top: 8px !important;
+    width: 53px !important;
+  }
+  .logo h3::after {
+    right: -7px !important;
+    width: 5px !important;
+    top: 8px !important;
+  }
+  .bm-burger-button {
+    right: 42px !important;
+  }
+  .resume-button {
+    margin-left: 82px !important;
+  }
+}
 .home {
   position: relative;
   display: flex;
@@ -466,8 +494,8 @@ nav .bm-overlay {
     border-radius: 0;
   }
   .about .title::after {
-    width: 17.5rem !important;
-    transform: translate(-0.2rem, 900%) !important;
+    width: 13rem !important;
+    transform: translate(-0.2rem, 700%) !important;
   }
   .about .about-text button {
     margin-top: -165px !important;
@@ -574,11 +602,11 @@ nav .bm-overlay {
 
 @media screen and (max-width: 768px) {
   .portfolio .title::after {
-    width: 13.7rem !important;
-    transform: translate(-0.2rem, 900%) !important;
+    width: 10.2rem !important;
+    transform: translate(-0.2rem, 700%) !important;
   }
   .portfolio .portfolio-body p {
-    padding: 0 1rem;
+    padding: 0 2rem;
   }
 }
 @media screen and (max-width: 668px) {
@@ -859,8 +887,8 @@ nav .bm-overlay {
     border-radius: 0;
   }
   .contact .title::after {
-    width: 13rem !important;
-    transform: translate(-0.2rem, 900%) !important;
+    width: 9.5rem !important;
+    transform: translate(-0.2rem, 700%) !important;
   }
   .contact .left-side {
     border-right: none !important;
@@ -1017,17 +1045,21 @@ footer {
 
 @media screen and (max-width: 768px) {
   .title {
-    padding-left: 2rem !important;
+    padding-left: 2.5rem !important;
   }
   .title h2 {
     width: 100%;
+    font-size: 3.5rem;
   }
   .title div {
     position: absolute;
-    right: 1rem;
-    transform: scale(1.5);
+    right: 0;
+    transform: scale(1.2);
   }
   .title::after {
     width: 20rem !important;
+  }
+  .page {
+    padding-top: 1.5rem;
   }
 }/*# sourceMappingURL=style.css.map */

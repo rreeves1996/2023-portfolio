@@ -133,17 +133,21 @@ footer {
 
 @media screen and (max-width: 768px) {
 	.title {
-		padding-left: 2rem !important;
+		padding-left: 2.5rem !important;
 		h2 {
 			width: 100%;
+			font-size: 3.5rem;
 		}
 		div {
 			position: absolute;
-			right: 1rem;
-			transform: scale(1.5);
+			right: 0;
+			transform: scale(1.2);
 		}
 		&::after {
 			width: 20rem !important;
 		}
+	}
+	.page {
+		padding-top: 1.5rem;
 	}
 }
