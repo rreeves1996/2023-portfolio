@@ -20,6 +20,7 @@
 	}
 	.carousel-button {
 		@include flexCenter();
+		user-select: none !important;
 		cursor: pointer;
 		width: 2.2rem;
 		height: 4rem;
@@ -30,7 +31,6 @@
 		background-color: rgba(255, 255, 255, 0.171);
 		font-size: 2.7rem;
 		margin: 1rem;
-		cursor: pointer;
 
 		transition: all 200ms;
 
@@ -104,5 +104,31 @@
 				transform: translate(-0.2rem, 900%) !important;
 			}
 		}
+		.portfolio-body {
+			p {
+				padding: 0 1rem;
+			}
+		}
+	}
+}
+@media screen and (max-width: 668px) {
+	.carousel-button {
+		position: absolute;
+		background-color: rgb(221, 216, 216) !important;
+		&:hover {
+			background-color: rgb(255, 255, 255);
+			transform: scale(1.1);
+		}
+		svg {
+			color: black;
+		}
+	}
+	.left-btn {
+		left: 0.5rem;
+		z-index: 5;
+	}
+	.right-btn {
+		right: 0.5rem;
+		z-index: 5;
 	}
 }

@@ -61,7 +61,9 @@ export default function About() {
 							height:
 								width >= 768
 									? `${80 + 80 * currentSlide}px`
-									: `${70 + 160 * currentSlide}px`,
+									: currentSlide === 4
+									? '510px'
+									: `${55 + 140 * currentSlide}px`,
 						}}>
 						{SLIDES.map((slide) => slide)}
 						<button
@@ -71,7 +73,7 @@ export default function About() {
 								transform:
 									width >= 768
 										? `translateY(${-320 + 80 * currentSlide}px)`
-										: `translateY(${-430 + 160 * currentSlide}px)`,
+										: `translateY(${-340 + 140 * currentSlide}px)`,
 							}}>
 							<GoEllipsis />
 						</button>

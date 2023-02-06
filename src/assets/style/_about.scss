@@ -46,7 +46,7 @@
 			margin: 0 auto;
 			width: 60%;
 			max-width: 40rem;
-			min-width: 23rem;
+			// min-width: 23rem;
 			padding: 0.5rem;
 			flex: 1 1 20rem;
 			text-align: center;
@@ -99,6 +99,7 @@
 
 @media screen and (max-width: 768px) {
 	.about {
+		border-radius: 0;
 		.title {
 			&::after {
 				width: 17.5rem !important;
@@ -108,6 +109,10 @@
 		.about-text {
 			button {
 				margin-top: -165px !important;
+			}
+			.p-section {
+				padding: 0 1rem;
+				font-size: 1.5rem !important;
 			}
 		}
 	}

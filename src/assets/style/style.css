@@ -416,7 +416,6 @@ nav .bm-overlay {
   margin: 0 auto;
   width: 60%;
   max-width: 40rem;
-  min-width: 23rem;
   padding: 0.5rem;
   flex: 1 1 20rem;
   text-align: center;
@@ -463,12 +462,19 @@ nav .bm-overlay {
 }
 
 @media screen and (max-width: 768px) {
+  .about {
+    border-radius: 0;
+  }
   .about .title::after {
     width: 17.5rem !important;
     transform: translate(-0.2rem, 900%) !important;
   }
   .about .about-text button {
     margin-top: -165px !important;
+  }
+  .about .about-text .p-section {
+    padding: 0 1rem;
+    font-size: 1.5rem !important;
   }
 }
 .portfolio {
@@ -492,6 +498,10 @@ nav .bm-overlay {
   display: flex;
   justify-content: center;
   align-items: center;
+  -webkit-user-select: none !important;
+     -moz-user-select: none !important;
+      -ms-user-select: none !important;
+          user-select: none !important;
   cursor: pointer;
   width: 2.2rem;
   height: 4rem;
@@ -502,7 +512,6 @@ nav .bm-overlay {
   background-color: rgba(255, 255, 255, 0.171);
   font-size: 2.7rem;
   margin: 1rem;
-  cursor: pointer;
   transition: all 200ms;
 }
 .portfolio .carousel-button:hover {
@@ -568,6 +577,30 @@ nav .bm-overlay {
     width: 13.7rem !important;
     transform: translate(-0.2rem, 900%) !important;
   }
+  .portfolio .portfolio-body p {
+    padding: 0 1rem;
+  }
+}
+@media screen and (max-width: 668px) {
+  .carousel-button {
+    position: absolute;
+    background-color: rgb(221, 216, 216) !important;
+  }
+  .carousel-button:hover {
+    background-color: rgb(255, 255, 255);
+    transform: scale(1.1);
+  }
+  .carousel-button svg {
+    color: black;
+  }
+  .left-btn {
+    left: 0.5rem;
+    z-index: 5;
+  }
+  .right-btn {
+    right: 0.5rem;
+    z-index: 5;
+  }
 }
 .carousel {
   display: flex;
@@ -617,7 +650,9 @@ nav .bm-overlay {
 
 @media screen and (max-width: 668px) {
   .slide-container {
-    height: 18rem !important;
+    display: flex;
+    height: 17rem !important;
+    width: 19rem !important;
   }
 }
 .contact {
@@ -626,7 +661,6 @@ nav .bm-overlay {
   flex-direction: column;
   background: #21114b;
   border-radius: 40px;
-  min-height: 61vh;
 }
 .contact .title {
   margin-bottom: 4rem;
@@ -821,9 +855,22 @@ nav .bm-overlay {
 }
 
 @media screen and (max-width: 768px) {
+  .contact {
+    border-radius: 0;
+  }
   .contact .title::after {
     width: 13rem !important;
     transform: translate(-0.2rem, 900%) !important;
+  }
+  .contact .left-side {
+    border-right: none !important;
+  }
+  .contact .right-side p {
+    font-size: 1.5rem;
+  }
+  .contact .right-side h4 {
+    text-align: center;
+    font-size: 2rem;
   }
   .contact header h2 {
     font-size: 7rem;
@@ -977,8 +1024,8 @@ footer {
   }
   .title div {
     position: absolute;
-    right: 0;
-    transform: translateY(-2rem);
+    right: 1rem;
+    transform: scale(1.5);
   }
   .title::after {
     width: 20rem !important;
