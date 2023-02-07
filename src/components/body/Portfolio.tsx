@@ -9,14 +9,15 @@ import TECH_BLOG from '../../assets/images/blog.png';
 import WEATHER_API from '../../assets/images/weather.png';
 import ScrollIntoView from 'react-scroll-into-view';
 
-interface Project {
+type Project = {
 	deployment: string;
 	github: string;
+	refactorNotes?: string;
 	img: string;
 	title: string;
 	subtitle: string;
 	desc: string[];
-}
+};
 
 const PROJECTS: Project[] = [
 	{
@@ -70,12 +71,16 @@ const PROJECTS: Project[] = [
 	{
 		deployment: 'https://rreeves-virtual-keyboard.herokuapp.com/',
 		github: 'https://github.com/rreeves1996/virtual-keyboard',
+		refactorNotes:
+			'https://github.com/rreeves1996/virtual-keyboard#refactor-notes',
 		img: VIRTUAL_KEYBOARD,
 		title: 'Virtual Keyboard',
 		subtitle: 'React, Node',
 		desc: [
 			'This is a virtual keyboard app, created with React. The user can type with the keyboard on the screen (or their own keyboard) and the text will display in the text box. Pretty simple!',
 			`Coming out of boot camp, I was eager to try to tackle creating something entirely on my own, and I was eager to learn more about React. I ended up looking for simple app ideas to find one I could find and create that was easy/simple enough for me to create fresh out of boot camp, but hard enough to challenge me in certain aspects and give me some sort of growth, if not the experience creating the app itself.`,
+			`Four months after its creation, I decided to give the app a refactor. The code was a mess and, although it functioned properly, was not following commonpractice for the most part. I had also made my life so much more difficult than it needed to be in a lot of areas - much of my contrived, massive functions or workarounds were easily solved with few lines of code.`,
+			`I took full notes on the refactor and added them to the README - to read the full notes, click the 'Refactor' button! I'm very happy with how the cleanup turned out, and refactoring my old code was a valuable experience.`,
 		],
 	},
 ];
@@ -139,6 +144,17 @@ export default function Portfolio() {
 						}>
 						Repository
 					</button>
+					{PROJECTS[currentSlide].refactorNotes && (
+						<>
+							<div className='divider' />
+							<button
+								onClick={() =>
+									(window.location.href = PROJECTS[currentSlide].refactorNotes!)
+								}>
+								Refactor
+							</button>
+						</>
+					)}
 				</div>
 				{PROJECTS[currentSlide].desc.map((p) => (
 					<p>{p}</p>
