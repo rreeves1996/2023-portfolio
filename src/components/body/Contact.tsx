@@ -53,14 +53,16 @@ export default function Contact() {
 								onClick={() => setDisplayed(!displayed)}>
 								<HiMail />
 							</button>
-							<a href='https://github.com/rreeves1996'>
+							<a href='https://github.com/rreeves1996' target='_blank'>
 								<button className='social-button github-button'>
 									<VscGithubInverted />
 								</button>
 							</a>
-							<button className='social-button'>
-								<FaLinkedinIn />
-							</button>
+							<a href='https://www.linkedin.com/in/rreevesdev/' target='_blank'>
+								<button className='social-button'>
+									<FaLinkedinIn />
+								</button>
+							</a>
 						</div>
 					</div>
 

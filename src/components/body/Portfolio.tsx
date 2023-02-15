@@ -131,28 +131,21 @@ export default function Portfolio() {
 				<h1>{PROJECTS[currentSlide].title}</h1>
 				<h5>{PROJECTS[currentSlide].subtitle}</h5>
 				<div className='button-container'>
-					<button
-						onClick={() =>
-							(window.location.href = PROJECTS[currentSlide].deployment)
-						}>
-						Deployment
-					</button>
+					<a href={`${PROJECTS[currentSlide].deployment}`} target='_blank'>
+						<button>Deployment</button>
+					</a>
 					<div className='divider' />
-					<button
-						onClick={() =>
-							(window.location.href = PROJECTS[currentSlide].github)
-						}>
-						Repository
-					</button>
+					<a href={`${PROJECTS[currentSlide].github}`} target='_blank'>
+						<button>Repository</button>
+					</a>
 					{PROJECTS[currentSlide].refactorNotes && (
 						<>
 							<div className='divider' />
-							<button
-								onClick={() =>
-									(window.location.href = PROJECTS[currentSlide].refactorNotes!)
-								}>
-								Refactor
-							</button>
+							<a
+								href={`${PROJECTS[currentSlide].refactorNotes!}`}
+								target='_blank'>
+								<button>Refactor</button>
+							</a>
 						</>
 					)}
 				</div>

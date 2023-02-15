@@ -528,7 +528,6 @@ nav .bm-overlay {
   align-items: center;
   -webkit-user-select: none !important;
      -moz-user-select: none !important;
-      -ms-user-select: none !important;
           user-select: none !important;
   cursor: pointer;
   width: 2.2rem;
@@ -557,7 +556,7 @@ nav .bm-overlay {
   align-items: center;
   flex-direction: column;
   width: 65%;
-  min-width: 25rem;
+  min-width: 23rem;
   text-align: center;
   margin: auto;
 }
@@ -964,6 +963,7 @@ body {
   background: #412291;
   color: #f5f2f5;
   overflow-y: scroll;
+  min-width: 100vw !important;
 }
 
 main {
