@@ -54,7 +54,7 @@ export default function About() {
 					<img src={portrait} alt='portrait' className='portrait' />
 				</div>
 				<div className='about-text'>
-					<h1>Learner, musician, engineer </h1>
+					<h1>Learner, musician, builder </h1>
 					<div
 						className='about-body'
 						style={{
