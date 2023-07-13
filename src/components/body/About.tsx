@@ -73,7 +73,7 @@ export default function About() {
 								transform:
 									width >= 768
 										? `translateY(${-320 + 80 * currentSlide}px)`
-										: `translateY(${-340 + 140 * currentSlide}px)`,
+										: `translateY(${-250 + 120 * currentSlide}px)`,
 							}}>
 							<GoEllipsis />
 						</button>
