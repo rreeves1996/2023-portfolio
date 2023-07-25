@@ -1,7 +1,5 @@
-import React, { useState } from 'react';
-import { CSSTransition } from 'react-transition-group';
+import React from 'react';
 import { FaCaretLeft, FaCaretRight } from 'react-icons/fa';
-import Slide from './Slide';
 
 type Props = {
 	children: JSX.Element;
@@ -70,7 +68,8 @@ export default function Carousel({
 		<div className='carousel'>
 			<button
 				onClick={() => handleSlideRight()}
-				className='carousel-button left-btn'>
+				className='carousel-button left-btn'
+				aria-role='carousel left button'>
 				<FaCaretLeft />
 			</button>
 
@@ -78,7 +77,8 @@ export default function Carousel({
 
 			<button
 				onClick={() => handleSlideLeft()}
-				className='carousel-button right-btn'>
+				className='carousel-button right-btn'
+				aria-role='carousel right button'>
 				<FaCaretRight />
 			</button>
 		</div>

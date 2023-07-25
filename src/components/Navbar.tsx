@@ -26,23 +26,26 @@ export default function Navbar() {
 				}>
 				{location.pathname === '/' ? 'Resume' : 'Go Back'}
 			</button>
+
 			<Menu itemListElement='div' disableAutoFocus right>
 				<header>
 					<h3>Navigation</h3>
 				</header>
+
 				{location.pathname === '/resume' ? (
 					<ScrollIntoView selector='.home'>
 						<div
 							className='nav-button'
 							id='home-link'
-							onClick={() => navigate('/')}>
+							onClick={() => navigate('/')}
+							aria-role='home link'>
 							<FaHome />
 							<h6>Home</h6>
 						</div>
 					</ScrollIntoView>
 				) : (
 					<ScrollIntoView selector='.home'>
-						<div className='nav-button'>
+						<div className='nav-button' aria-role='return to top link'>
 							<FaArrowAltCircleUp />
 							<h6>Back to top</h6>
 						</div>
@@ -51,19 +54,30 @@ export default function Navbar() {
 				{location.pathname === '/' ? (
 					<>
 						<ScrollIntoView selector='.about'>
-							<div className='nav-button' id='about-link'>
+							<div
+								className='nav-button'
+								id='about-link'
+								aria-role='about link'>
 								<FaUser />
 								<h6>About</h6>
 							</div>
 						</ScrollIntoView>
+
 						<ScrollIntoView selector='.portfolio'>
-							<div className='nav-button' id='projects-link'>
+							<div
+								className='nav-button'
+								id='projects-link'
+								aria-role='projects link'>
 								<FaFolder />
 								<h6>Projects</h6>
 							</div>
 						</ScrollIntoView>
+
 						<ScrollIntoView selector='.contact'>
-							<div className='nav-button' id='contact-link'>
+							<div
+								className='nav-button'
+								id='contact-link'
+								aria-role='contact link'>
 								<HiMail />
 								<h6>Contact</h6>
 							</div>
