@@ -76,7 +76,7 @@ export default function About() {
 								opacity: currentSlide > 3 ? 0 : 1,
 								transform:
 									width >= 768
-										? `translateY(${-320 + 80 * currentSlide}px)`
+										? `translateY(${-350 + 80 * currentSlide}px)`
 										: width >= 376
 										? `translateY(${-350 + 140 * currentSlide}px)`
 										: `translateY(${-350 + 145 * currentSlide}px)`,

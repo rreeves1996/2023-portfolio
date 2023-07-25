@@ -104,7 +104,7 @@
 	.portfolio {
 		.title {
 			&::after {
-				width: 18rem !important;
+				width: 14.5rem !important;
 				transform: translate(-0.2rem, 700%) !important;
 			}
 		}
@@ -120,6 +120,7 @@
 	.carousel-button {
 		position: absolute;
 		background-color: rgb(221, 216, 216) !important;
+
 		&:hover {
 			background-color: rgb(255, 255, 255);
 			transform: scale(1.1);
