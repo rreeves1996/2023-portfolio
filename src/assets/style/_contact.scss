@@ -104,41 +104,46 @@
 		}
 
 		.right-side {
-			flex: 1 1 25rem;
 			@include flexColumnJustify(center);
+			flex: 1 1 25rem;
 			max-width: 25rem;
 			width: 25rem;
 
 			padding: 0 2rem;
 		}
 	}
+
 	.form-container {
 		@include flexColumnAlign(center);
+		opacity: 1;
 		width: 60%;
 		margin: 2rem auto;
-		min-height: 320px;
-		height: 320px;
-		opacity: 1;
+		min-height: 20rem;
+		height: 20rem;
 		transition: transform 800ms, opacity 400ms 200ms, min-height 400ms,
 			height 400ms;
 
 		&.hidden {
 			opacity: 0 !important;
-			transform: translateY(-2rem);
 			height: 0 !important;
 			min-height: 0 !important;
-			transition: transform 400ms, opacity 200ms, min-height 200ms, height 200ms;
+			transform: translateY(-2rem);
+			transition: transform 400ms, opacity 400ms, min-height 400ms, height 400ms;
 		}
+
 		div {
 			@include flexRowAlign(center);
 			width: 100%;
+
 			.field {
 				@include flexColumnJustify(space-between);
-				align-items: unset;
 				width: 50%;
+
 				.label {
 					width: 100%;
+					margin-left: 0.5rem;
 				}
+
 				input {
 					width: 100%;
 					margin: 0.5rem;
@@ -153,13 +158,19 @@
 				}
 			}
 		}
-		.subject {
-			.field {
-				width: 100%;
-			}
+
+		.name-email {
+			margin-top: 0.5rem;
 		}
+
 		.body-field {
 			@include flexColumnJustify(center);
+			margin-top: 0.5rem;
+
+			.label {
+				width: 100%;
+				margin-left: 0.5rem;
+			}
 
 			textarea {
 				margin: 0.5rem;
@@ -174,6 +185,7 @@
 				}
 			}
 		}
+
 		.submit-btn {
 			cursor: pointer;
 			background-color: $purplePrimary;
@@ -191,6 +203,32 @@
 				background-color: #6bbeda;
 				color: $purpleDark;
 			}
+		}
+	}
+
+	.submit-confirm-container {
+		@include flexCenter();
+		opacity: 1;
+		width: 60%;
+		margin: 1rem auto;
+		min-height: 4rem;
+		font-size: 3rem;
+		transition: opacity 350ms 500ms, min-height 400ms;
+
+		&.hidden {
+			opacity: 0 !important;
+			height: 0 !important;
+			min-height: 0 !important;
+			transition: opacity 400ms, min-height 400ms;
+		}
+
+		h3 {
+			font-weight: 700;
+		}
+
+		.checkmark {
+			margin-right: 0.5rem;
+			color: $aquaLight;
 		}
 	}
 }

@@ -494,7 +494,7 @@ nav .bm-overlay {
     border-radius: 0;
   }
   .about .title::after {
-    width: 13rem !important;
+    width: 18rem !important;
     transform: translate(-0.2rem, 700%) !important;
   }
   .about .about-text button {
@@ -601,7 +601,7 @@ nav .bm-overlay {
 
 @media screen and (max-width: 768px) {
   .portfolio .title::after {
-    width: 10.2rem !important;
+    width: 18rem !important;
     transform: translate(-0.2rem, 700%) !important;
   }
   .portfolio .portfolio-body p {
@@ -789,10 +789,10 @@ nav .bm-overlay {
   padding: 0 0.2rem;
 }
 .contact header .right-side {
-  flex: 1 1 25rem;
   display: flex;
   justify-content: center;
   flex-direction: column;
+  flex: 1 1 25rem;
   max-width: 25rem;
   width: 25rem;
   padding: 0 2rem;
@@ -801,19 +801,19 @@ nav .bm-overlay {
   display: flex;
   align-items: center;
   flex-direction: column;
+  opacity: 1;
   width: 60%;
   margin: 2rem auto;
-  min-height: 320px;
-  height: 320px;
-  opacity: 1;
+  min-height: 20rem;
+  height: 20rem;
   transition: transform 800ms, opacity 400ms 200ms, min-height 400ms, height 400ms;
 }
 .contact .form-container.hidden {
   opacity: 0 !important;
-  transform: translateY(-2rem);
   height: 0 !important;
   min-height: 0 !important;
-  transition: transform 400ms, opacity 200ms, min-height 200ms, height 200ms;
+  transform: translateY(-2rem);
+  transition: transform 400ms, opacity 400ms, min-height 400ms, height 400ms;
 }
 .contact .form-container div {
   display: flex;
@@ -825,11 +825,11 @@ nav .bm-overlay {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  align-items: unset;
   width: 50%;
 }
 .contact .form-container div .field .label {
   width: 100%;
+  margin-left: 0.5rem;
 }
 .contact .form-container div .field input {
   width: 100%;
@@ -843,13 +843,18 @@ nav .bm-overlay {
 .contact .form-container div .field input:focus {
   outline: 2px solid #5f37ce;
 }
-.contact .form-container .subject .field {
-  width: 100%;
+.contact .form-container .name-email {
+  margin-top: 0.5rem;
 }
 .contact .form-container .body-field {
   display: flex;
   justify-content: center;
   flex-direction: column;
+  margin-top: 0.5rem;
+}
+.contact .form-container .body-field .label {
+  width: 100%;
+  margin-left: 0.5rem;
 }
 .contact .form-container .body-field textarea {
   margin: 0.5rem;
@@ -880,13 +885,37 @@ nav .bm-overlay {
   background-color: #6bbeda;
   color: #412291;
 }
+.contact .submit-confirm-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  width: 60%;
+  margin: 1rem auto;
+  min-height: 4rem;
+  font-size: 3rem;
+  transition: opacity 350ms 500ms, min-height 400ms;
+}
+.contact .submit-confirm-container.hidden {
+  opacity: 0 !important;
+  height: 0 !important;
+  min-height: 0 !important;
+  transition: opacity 400ms, min-height 400ms;
+}
+.contact .submit-confirm-container h3 {
+  font-weight: 700;
+}
+.contact .submit-confirm-container .checkmark {
+  margin-right: 0.5rem;
+  color: #10c3cf;
+}
 
 @media screen and (max-width: 768px) {
   .contact {
     border-radius: 0;
   }
   .contact .title::after {
-    width: 9.5rem !important;
+    width: 18rem !important;
     transform: translate(-0.2rem, 700%) !important;
   }
   .contact .left-side {

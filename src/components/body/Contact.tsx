@@ -2,12 +2,14 @@ import React, { useState, useRef } from 'react';
 import { HiMail } from 'react-icons/hi';
 import { VscGithubInverted } from 'react-icons/vsc';
 import { FaLinkedinIn } from 'react-icons/fa';
+import { BsCheckCircleFill } from 'react-icons/bs';
 import emailjs from '@emailjs/browser';
 import ScrollIntoView from 'react-scroll-into-view';
 
 export default function Contact() {
 	const form = useRef<HTMLFormElement>(null);
-	const [displayed, setDisplayed] = useState(false);
+	const [displayed, setDisplayed] = useState<boolean>(false);
+	const [submitted, setSubmitted] = useState<boolean>(false);
 	const [formState, setFormState] = useState({
 		user_name: '',
 		user_email: '',
@@ -36,11 +38,12 @@ export default function Contact() {
 				VITE_PUBLIC_KEY!
 			)
 			.then(
-				(result) => {
-					console.log(result.text);
+				(res) => {
+					setSubmitted(true);
+					setDisplayed(false);
 				},
-				(error) => {
-					console.log(error.text);
+				(err) => {
+					window.alert(err.text);
 				}
 			);
 	};
@@ -206,6 +209,16 @@ export default function Contact() {
 					Submit
 				</button>
 			</form>
+
+			<div
+				className={
+					submitted
+						? 'submit-confirm-container'
+						: 'submit-confirm-container hidden'
+				}>
+				<BsCheckCircleFill className='checkmark' />
+				<h3>Submitted</h3>
+			</div>
 		</section>
 	);
 }
