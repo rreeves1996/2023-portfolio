@@ -1,17 +1,20 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { HiMail } from 'react-icons/hi';
 import { VscGithubInverted } from 'react-icons/vsc';
 import { FaLinkedinIn } from 'react-icons/fa';
+import emailjs from '@emailjs/browser';
 import ScrollIntoView from 'react-scroll-into-view';
 
 export default function Contact() {
+	const form = useRef<HTMLFormElement>(null);
 	const [displayed, setDisplayed] = useState(false);
 	const [formState, setFormState] = useState({
-		name: '',
-		email: '',
-		subject: '',
+		user_name: '',
+		user_email: '',
 		message: '',
 	});
+	const { VITE_SERVICE_ID, VITE_TEMPLATE_ID, VITE_PUBLIC_KEY } = import.meta
+		.env;
 
 	const handleChange = (event: any) => {
 		const { name, value } = event.target;
@@ -22,10 +25,24 @@ export default function Contact() {
 		});
 	};
 
-	const handleFormSubmit = (event: any) => {
-		event.preventDefault();
+	const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
+		e.preventDefault();
 
-		window.location.reload();
+		emailjs
+			.sendForm(
+				VITE_SERVICE_ID!,
+				VITE_TEMPLATE_ID!,
+				form.current!,
+				VITE_PUBLIC_KEY!
+			)
+			.then(
+				(result) => {
+					console.log(result.text);
+				},
+				(error) => {
+					console.log(error.text);
+				}
+			);
 	};
 
 	return (
@@ -120,10 +137,11 @@ export default function Contact() {
 
 			<form
 				className={displayed ? 'form-container' : 'form-container hidden'}
-				onSubmit={handleFormSubmit}>
+				ref={form}
+				onSubmit={sendEmail}>
 				<div className='name-email'>
 					<div className='field name-field'>
-						<label className='label' htmlFor='name'>
+						<label className='label' htmlFor='user_name'>
 							Name:
 						</label>
 
@@ -131,18 +149,18 @@ export default function Contact() {
 							<input
 								className='input'
 								type='text'
-								name='name'
+								name='user_name'
 								placeholder='Your name'
 								aria-role='name input'
 								aria-required={true}
-								value={formState.name}
+								value={formState.user_name}
 								onChange={handleChange}
 							/>
 						</div>
 					</div>
 
 					<div className='field email-field'>
-						<label className='label' htmlFor='email'>
+						<label className='label' htmlFor='user_email'>
 							Email:
 						</label>
 
@@ -150,32 +168,11 @@ export default function Contact() {
 							<input
 								className='input'
 								type='email'
-								name='email'
+								name='user_email'
 								placeholder='Your email'
 								aria-role='email input'
 								aria-required={true}
-								value={formState.email}
-								onChange={handleChange}
-							/>
-						</div>
-					</div>
-				</div>
-
-				<div className='subject'>
-					<div className='field subject-field'>
-						<label className='label' htmlFor='subject'>
-							Subject:
-						</label>
-
-						<div className='control'>
-							<input
-								className='input'
-								type='text'
-								name='subject'
-								placeholder='Subject'
-								aria-role='subject input'
-								aria-required={true}
-								value={formState.subject}
+								value={formState.user_email}
 								onChange={handleChange}
 							/>
 						</div>
@@ -183,7 +180,7 @@ export default function Contact() {
 				</div>
 
 				<div className='field body-field'>
-					<label className='label' htmlFor='message-box'>
+					<label className='label' htmlFor='message'>
 						Message:
 					</label>
 
@@ -193,7 +190,7 @@ export default function Contact() {
 							className='message-box'
 							autoComplete='off'
 							placeholder='Be nice...'
-							name='message-box'
+							name='message'
 							aria-role='message text area'
 							aria-required={true}
 						/>
@@ -203,6 +200,7 @@ export default function Contact() {
 				<button
 					type='submit'
 					className='submit-btn'
+					value='Send'
 					aria-role='submit button'
 					aria-required={true}>
 					Submit
