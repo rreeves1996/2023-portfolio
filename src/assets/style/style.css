@@ -286,9 +286,6 @@ nav .bm-overlay {
   .bm-burger-button {
     right: 42px !important;
   }
-  .resume-button {
-    margin-left: 82px !important;
-  }
 }
 .home {
   display: flex;

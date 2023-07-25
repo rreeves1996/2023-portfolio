@@ -205,9 +205,11 @@ Note: Beware of modifying this element as it can break the animations - you shou
 	.logo {
 		transform: scale(0.8);
 		margin-left: 0.5rem;
+
 		h2 {
 			border-radius: 5px !important;
 		}
+
 		h3 {
 			transform: translateX(3.7rem) !important;
 
@@ -223,10 +225,8 @@ Note: Beware of modifying this element as it can break the animations - you shou
 			}
 		}
 	}
+
 	.bm-burger-button {
 		right: 42px !important;
-	}
-	.resume-button {
-		margin-left: 82px !important;
 	}
 }
