@@ -19,13 +19,13 @@
 			font-family: $accentText2;
 			text-transform: uppercase;
 			letter-spacing: -2px;
+			margin: 0 0 0.8rem 0;
 		}
 
 		h4 {
 			font-size: 1.7rem;
 			font-weight: 100;
 			letter-spacing: 3px;
-			margin-top: 0.8rem;
 		}
 
 		code {
@@ -44,7 +44,7 @@
 
 	.home-menu {
 		@include flexCenter(row);
-		margin: 3rem 0 0;
+		margin: 5rem 0 2rem;
 
 		div {
 			.home-button {
@@ -61,6 +61,7 @@
 				cursor: pointer;
 				transition: background 200ms, color 200ms;
 			}
+
 			#projects-button {
 				&:hover {
 					background: $greenLight;
@@ -80,14 +81,49 @@
 	}
 }
 
+@media screen and (max-width: 1052px) {
+	.home {
+		header {
+			h1 {
+				font-size: 6.5rem;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 920px) {
+	.home {
+		header {
+			code {
+				font-size: 1.8rem;
+			}
+
+			h1 {
+				font-size: 5.5rem;
+			}
+
+			h4 {
+				font-size: 1.5rem;
+			}
+		}
+	}
+}
+
 @media screen and (max-width: 768px) {
 	.home {
 		header {
-			padding: 1rem 1rem;
+			code {
+				font-size: 4.5vw;
+			}
 
 			h1 {
-				font-size: 4.5rem;
-				padding: 0 1rem;
+				margin-top: 0.5rem;
+				font-size: 13vw;
+				filter: drop-shadow(-3px 3px 0px $greenDark);
+			}
+
+			h4 {
+				font-size: 4vw;
 			}
 		}
 	}
