@@ -315,7 +315,7 @@ nav .bm-overlay {
   text-transform: uppercase;
   letter-spacing: -2px;
   margin: 0 0 0.8rem 0;
-  text-overflow: clip;
+  white-space: nowrap;
 }
 .home header h4 {
   font-size: 1.7rem;
