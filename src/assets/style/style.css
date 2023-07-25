@@ -291,71 +291,65 @@ nav .bm-overlay {
   }
 }
 .home {
-  position: relative;
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
+  position: relative;
   height: 40rem;
   min-height: 79vh;
   margin-top: 5rem;
 }
-.home section {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-end;
-  height: 100%;
-  width: 100%;
-}
-.home section .home-menu {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  margin: 0 auto;
-}
 .home header {
   display: flex;
-  margin: auto;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
-  font-size: 200%;
-  padding-top: 13%;
   filter: drop-shadow(0px 0px 100px rgba(255, 255, 255, 0.178));
   width: 90%;
+}
+.home header h1 {
+  font-size: 8rem;
+  color: #f5f2f5;
+  opacity: 0.95;
+  margin: 0;
+  filter: drop-shadow(-4px 4px 0px #41d4b7);
+  font-family: "Alumni Sans Pinstripe";
+  text-transform: uppercase;
+  letter-spacing: -2px;
+}
+.home header h4 {
+  font-size: 1.7rem;
+  font-weight: 100;
+  letter-spacing: 3px;
+  margin-top: 0.8rem;
 }
 .home header code {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0.2rem;
-  width: 12rem;
-  font-size: 1.3rem;
+  flex-direction: row;
+  padding: 0.2rem 0.5rem;
+  font-size: 2rem;
   background: #5dffd9;
   color: #5f37ce;
-  letter-spacing: -1px;
-  margin-bottom: 1rem;
+  letter-spacing: -2px;
+  text-transform: uppercase;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
 }
-.home header h1 {
+.home .home-menu {
   display: flex;
-  flex-direction: row;
+  justify-content: center;
   align-items: center;
-  font-size: 8rem;
-  color: #f5f2f5;
-  text-indent: 0.5rem;
-  opacity: 0.95;
-  filter: drop-shadow(-8px 6px 0px #41d4b7);
+  flex-direction: row;
+  margin: 3rem 0 0;
 }
-.home header h4 {
-  font-size: 2.2rem;
-  font-weight: 200;
-  text-indent: 3rem;
-  margin-top: 0.7rem;
-}
-.home header h4 strong {
-  color: #5dffd9;
-  font-weight: 500;
-}
-.home .home-button {
+.home .home-menu div .home-button {
   width: 8rem;
   height: 3.5rem;
-  margin: 5rem 2rem;
+  margin: 0 2rem;
   background: transparent;
   color: #5dffd9;
   border: 3px solid #5dffd9;
@@ -366,19 +360,15 @@ nav .bm-overlay {
   cursor: pointer;
   transition: background 200ms, color 200ms;
 }
-.home .bracket-square {
-  font-size: 5rem;
-  margin-left: 1rem;
-}
-.home #projects-button:hover {
+.home .home-menu div #projects-button:hover {
   background: #5dffd9;
   color: #412291;
 }
-.home #contact-button {
+.home .home-menu div #contact-button {
   border: none;
   background: rgba(255, 255, 255, 0.103);
 }
-.home #contact-button:hover {
+.home .home-menu div #contact-button:hover {
   background: rgba(255, 255, 255, 0.151);
 }
 
@@ -423,6 +413,7 @@ nav .bm-overlay {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: row;
   flex: 1 1 27rem;
   max-width: 28rem;
   margin: 2rem;
@@ -466,6 +457,7 @@ nav .bm-overlay {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: row;
   border: none;
   background-color: transparent;
   width: 5rem;
@@ -526,6 +518,7 @@ nav .bm-overlay {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: row;
   -webkit-user-select: none !important;
      -moz-user-select: none !important;
           user-select: none !important;
@@ -633,12 +626,14 @@ nav .bm-overlay {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: row;
   margin: 4rem 0 1rem;
 }
 .carousel .slide-container {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: row;
   position: relative;
   overflow: hidden;
   background-color: #21114b;
@@ -709,6 +704,7 @@ nav .bm-overlay {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: row;
   height: 100%;
   flex-wrap: wrap;
 }
@@ -740,6 +736,7 @@ nav .bm-overlay {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: row;
   background-color: #5f37ce;
   font-size: 2rem;
   cursor: pointer;
@@ -889,6 +886,7 @@ nav .bm-overlay {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: row;
   opacity: 1;
   width: 60%;
   margin: 1rem auto;
@@ -1046,6 +1044,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: row;
 }
 
 .resume {

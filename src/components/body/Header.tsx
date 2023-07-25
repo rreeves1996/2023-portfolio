@@ -6,40 +6,31 @@ export default function Header() {
 	return (
 		<section className='home'>
 			<header>
-				<code>Hello! My name is</code>
-				<h1>
-					Ryan Reeves
-					<HiCodeBracketSquare className='bracket-square' />
-				</h1>
+				<code>{`Ryan Reeves`}</code>
 
-				<h4>
-					I am a <strong>Front-End Developer</strong> from{' '}
-					<strong>Seattle, Washington</strong>
-				</h4>
+				<h1>{`{ Front-End Developer }`}</h1>
+
+				<h4>React.js | TypeScript | Node.js</h4>
 			</header>
 
-			<section>
-				<div className='home-menu'>
-					<ScrollIntoView selector='.portfolio'>
-						<button
-							className='home-button'
-							id='projects-button'
-							aria-role='projects button'>
-							Projects
-						</button>
-					</ScrollIntoView>
+			<section className='home-menu'>
+				<ScrollIntoView selector='.portfolio'>
+					<button
+						className='home-button'
+						id='projects-button'
+						aria-role='projects button'>
+						Projects
+					</button>
+				</ScrollIntoView>
 
-					<div className='divider' />
-
-					<ScrollIntoView selector='.contact'>
-						<button
-							className='home-button'
-							id='contact-button'
-							aria-role='contact button'>
-							Contact
-						</button>
-					</ScrollIntoView>
-				</div>
+				<ScrollIntoView selector='.contact'>
+					<button
+						className='home-button'
+						id='contact-button'
+						aria-role='contact button'>
+						Contact
+					</button>
+				</ScrollIntoView>
 			</section>
 		</section>
 	);

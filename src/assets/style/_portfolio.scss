@@ -19,7 +19,7 @@
 		}
 	}
 	.carousel-button {
-		@include flexCenter();
+		@include flexCenter(row);
 		user-select: none !important;
 		cursor: pointer;
 		width: 2.2rem;
@@ -55,16 +55,19 @@
 		min-width: 23rem;
 		text-align: center;
 		margin: auto;
+
 		h1 {
 			font-size: 3.5rem;
 			margin: 0.5rem 0 1rem;
 			filter: drop-shadow(4px 4px 0px $greenDark);
 		}
+
 		p {
 			font-size: 1.4rem;
 			text-align: left;
 			text-indent: 2rem;
 		}
+
 		.button-container {
 			@include flexRowAlign(center);
 			margin: 0.8rem auto;
@@ -85,6 +88,7 @@
 					background-color: rgba(255, 255, 255, 0.068);
 				}
 			}
+
 			.divider {
 				width: 2.5px;
 				border-radius: 2px;
@@ -104,6 +108,7 @@
 				transform: translate(-0.2rem, 700%) !important;
 			}
 		}
+
 		.portfolio-body {
 			p {
 				padding: 0 2rem;
@@ -119,14 +124,17 @@
 			background-color: rgb(255, 255, 255);
 			transform: scale(1.1);
 		}
+
 		svg {
 			color: black;
 		}
 	}
+
 	.left-btn {
 		left: 0.5rem;
 		z-index: 5;
 	}
+
 	.right-btn {
 		right: 0.5rem;
 		z-index: 5;

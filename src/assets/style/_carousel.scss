@@ -1,10 +1,9 @@
 .carousel {
-	@include flexCenter();
-
+	@include flexCenter(row);
 	margin: 4rem 0 1rem;
 
 	.slide-container {
-		@include flexCenter();
+		@include flexCenter(row);
 		position: relative;
 		overflow: hidden;
 		background-color: $purpleVeryDark;
@@ -21,6 +20,7 @@
 			background-color: $purpleVeryDark;
 			z-index: 2;
 		}
+
 		.slide {
 			@include flexColumnAlign(center);
 			position: absolute;
@@ -42,6 +42,7 @@
 		}
 	}
 }
+
 @media screen and (max-width: 668px) {
 	.slide-container {
 		display: flex;

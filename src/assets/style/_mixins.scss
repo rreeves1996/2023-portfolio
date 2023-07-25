@@ -3,10 +3,11 @@
 	user-select: none;
 }
 
-@mixin flexCenter {
+@mixin flexCenter($direction) {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	flex-direction: $direction;
 }
 @mixin flexRowJustify($justify) {
 	display: flex;

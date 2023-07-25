@@ -20,7 +20,7 @@
 		}
 	}
 	header {
-		@include flexCenter();
+		@include flexCenter(row);
 		height: 100%;
 		flex-wrap: wrap;
 
@@ -46,7 +46,7 @@
 					height: 100%;
 
 					.social-button {
-						@include flexCenter();
+						@include flexCenter(row);
 						background-color: $purplePrimary;
 						font-size: 2rem;
 						cursor: pointer;
@@ -207,7 +207,7 @@
 	}
 
 	.submit-confirm-container {
-		@include flexCenter();
+		@include flexCenter(row);
 		opacity: 1;
 		width: 60%;
 		margin: 1rem auto;

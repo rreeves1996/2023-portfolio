@@ -56,7 +56,7 @@ export default function About() {
 				</div>
 
 				<div className='about-text'>
-					<h1>Learner, musician, builder </h1>
+					<h1>Learner, musician, designer </h1>
 
 					<div
 						className='about-body'

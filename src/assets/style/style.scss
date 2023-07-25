@@ -104,7 +104,7 @@ footer {
 }
 
 footer {
-	@include flexCenter();
+	@include flexCenter(row);
 }
 
 .resume {

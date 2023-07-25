@@ -1,100 +1,81 @@
 .home {
+	@include flexCenter(column);
 	position: relative;
-	display: flex;
-	flex-direction: column;
 	height: 40rem;
 	min-height: 79vh;
 	margin-top: 5rem;
 
-	section {
-		@include flexRowAlign(flex-end);
-
-		height: 100%;
-		width: 100%;
-
-		.home-menu {
-			@include flexRowAlign(center);
-
-			margin: 0 auto;
-		}
-	}
-
 	header {
-		display: flex;
-		margin: auto;
-		flex-direction: column;
-		font-size: 200%;
-		padding-top: 13%;
+		@include flexCenter(column);
 		filter: drop-shadow(0px 0px 100px rgba(255, 255, 255, 0.178));
 		width: 90%;
-		code {
-			@include flexCenter();
-
-			padding: 0.2rem;
-			width: 12rem;
-			font-size: 1.3rem;
-			background: $greenLight;
-			color: $purplePrimary;
-			letter-spacing: -1px;
-			margin-bottom: 1rem;
-		}
 
 		h1 {
-			@include flexRowAlign(center);
-
 			font-size: 8rem;
 			color: $offWhite;
-			text-indent: 0.5rem;
 			opacity: 0.95;
-			filter: drop-shadow(-8px 6px 0px $greenDark);
+			margin: 0;
+			filter: drop-shadow(-4px 4px 0px $greenDark);
+			font-family: $accentText2;
+			text-transform: uppercase;
+			letter-spacing: -2px;
 		}
 
 		h4 {
-			font-size: 2.2rem;
-			font-weight: 200;
-			text-indent: 3rem;
-			margin-top: 0.7rem;
-
-			strong {
-				color: $greenLight;
-
-				font-weight: 500;
-			}
+			font-size: 1.7rem;
+			font-weight: 100;
+			letter-spacing: 3px;
+			margin-top: 0.8rem;
 		}
-	}
 
-	.home-button {
-		width: 8rem;
-		height: 3.5rem;
-		margin: 5rem 2rem;
-		background: transparent;
-		color: $greenLight;
-		border: 3px solid $greenLight;
-		border-radius: 8px;
-		letter-spacing: 0.1rem;
-		font-family: 'Roboto';
-		font-size: 1.1rem;
-		cursor: pointer;
-		transition: background 200ms, color 200ms;
-	}
-
-	.bracket-square {
-		font-size: 5rem;
-		margin-left: 1rem;
-	}
-
-	#projects-button {
-		&:hover {
+		code {
+			@include flexCenter(row);
+			padding: 0.2rem 0.5rem;
+			font-size: 2rem;
 			background: $greenLight;
-			color: $purpleDark;
+			color: $purplePrimary;
+			letter-spacing: -2px;
+			text-transform: uppercase;
+			text-decoration: underline;
+			text-decoration-thickness: 2px;
+			text-underline-offset: 3px;
 		}
 	}
 
-	#contact-button {
-		border: none;
-		background: rgba(255, 255, 255, 0.103);
-		&:hover {
-			background: rgba(255, 255, 255, 0.151);
+	.home-menu {
+		@include flexCenter(row);
+		margin: 3rem 0 0;
+
+		div {
+			.home-button {
+				width: 8rem;
+				height: 3.5rem;
+				margin: 0 2rem;
+				background: transparent;
+				color: $greenLight;
+				border: 3px solid $greenLight;
+				border-radius: 8px;
+				letter-spacing: 0.1rem;
+				font-family: 'Roboto';
+				font-size: 1.1rem;
+				cursor: pointer;
+				transition: background 200ms, color 200ms;
+			}
+			#projects-button {
+				&:hover {
+					background: $greenLight;
+					color: $purpleDark;
+				}
+			}
+
+			#contact-button {
+				border: none;
+				background: rgba(255, 255, 255, 0.103);
+
+				&:hover {
+					background: rgba(255, 255, 255, 0.151);
+				}
+			}
 		}
 	}
 }
@@ -103,6 +84,7 @@
 	.home {
 		header {
 			padding: 1rem 1rem;
+
 			h1 {
 				font-size: 4.5rem;
 				padding: 0 1rem;
