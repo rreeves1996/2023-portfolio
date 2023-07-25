@@ -306,7 +306,7 @@ nav .bm-overlay {
   width: 90%;
 }
 .home header h1 {
-  font-size: 8rem;
+  font-size: 10rem;
   color: #f5f2f5;
   opacity: 0.95;
   margin: 0;
@@ -328,10 +328,10 @@ nav .bm-overlay {
   align-items: center;
   flex-direction: row;
   padding: 0.2rem 0.5rem;
-  font-size: 2rem;
+  font-size: 2.5rem;
   background: #5dffd9;
   color: #5f37ce;
-  letter-spacing: -2px;
+  letter-spacing: -3px;
   text-transform: uppercase;
   text-decoration: underline;
   text-decoration-thickness: 2px;
