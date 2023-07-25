@@ -20,6 +20,7 @@
 			text-transform: uppercase;
 			letter-spacing: -2px;
 			margin: 0 0 0.8rem 0;
+			text-overflow: clip;
 		}
 
 		h4 {
@@ -119,7 +120,8 @@
 			h1 {
 				margin-top: 0.5rem;
 				font-size: 13vw;
-				filter: drop-shadow(-3px 3px 0px $greenDark);
+				letter-spacing: -3px;
+				filter: drop-shadow(-2px 2px 0px $greenDark);
 			}
 
 			h4 {
