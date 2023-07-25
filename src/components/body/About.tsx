@@ -43,6 +43,7 @@ export default function About() {
 		<section className='about page'>
 			<section className='title'>
 				<h2>About me...</h2>
+
 				<ScrollIntoView selector='.about'>
 					<button>
 						<HiMagnifyingGlassCircle />
@@ -53,8 +54,10 @@ export default function About() {
 				<div className='img-wrapper'>
 					<img src={portrait} alt='portrait' className='portrait' />
 				</div>
+
 				<div className='about-text'>
 					<h1>Learner, musician, builder </h1>
+
 					<div
 						className='about-body'
 						style={{
@@ -66,6 +69,7 @@ export default function About() {
 									: `${55 + 140 * currentSlide}px`,
 						}}>
 						{SLIDES.map((slide) => slide)}
+
 						<button
 							onClick={() => handleAddSlide()}
 							style={{
@@ -77,7 +81,7 @@ export default function About() {
 										? `translateY(${-350 + 140 * currentSlide}px)`
 										: `translateY(${-350 + 145 * currentSlide}px)`,
 							}}>
-							<GoEllipsis />
+							<GoEllipsis aria-role='ellipsis button' />
 						</button>
 					</div>
 				</div>

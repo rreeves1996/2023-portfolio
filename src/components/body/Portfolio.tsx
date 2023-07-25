@@ -129,25 +129,38 @@ export default function Portfolio() {
 			<section className='portfolio-body'>
 				<h1>{PROJECTS[currentSlide].title}</h1>
 				<h5>{PROJECTS[currentSlide].subtitle}</h5>
+
 				<div className='button-container'>
-					<a href={`${PROJECTS[currentSlide].deployment}`} target='_blank'>
+					<a
+						href={`${PROJECTS[currentSlide].deployment}`}
+						target='_blank'
+						aria-label='deployment link'>
 						<button>Deployment</button>
 					</a>
+
 					<div className='divider' />
-					<a href={`${PROJECTS[currentSlide].github}`} target='_blank'>
+
+					<a
+						href={`${PROJECTS[currentSlide].github}`}
+						target='_blank'
+						aria-label='repository link'>
 						<button>Repository</button>
 					</a>
+
 					{PROJECTS[currentSlide].refactorNotes && (
 						<>
 							<div className='divider' />
+
 							<a
 								href={`${PROJECTS[currentSlide].refactorNotes!}`}
-								target='_blank'>
+								target='_blank'
+								aria-label='refactor link'>
 								<button>Refactor</button>
 							</a>
 						</>
 					)}
 				</div>
+
 				{PROJECTS[currentSlide].desc.map((p) => (
 					<p>{p}</p>
 				))}

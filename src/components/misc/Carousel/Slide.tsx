@@ -14,11 +14,8 @@ interface SlideProps {
 
 export default function Slide({ project, id }: SlideProps) {
 	return (
-		<div
-			className='slide'
-			data-id={id}
-			onClick={() => (window.location.href = project.deployment)}>
-			<img src={project.img} alt='slide' />
-		</div>
+		<a className='slide' data-id={id} target='_blank' href={project.deployment}>
+			<img src={project.img} alt='slide-img' />
+		</a>
 	);
 }
