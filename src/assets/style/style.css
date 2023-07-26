@@ -435,16 +435,18 @@ nav .bm-overlay {
     background-size: cover;
   }
   .home header code {
-    font-size: 4.5vw;
+    font-size: 5.5vw;
+  }
+  .home header code::after {
+    width: 0.5rem;
   }
   .home header h1 {
-    margin-top: 0.5rem;
-    font-size: 15vw;
-    letter-spacing: -3px;
+    font-size: 17vw;
     filter: drop-shadow(-2px 2px 0px #41d4b7);
   }
   .home header h4 {
     font-size: 4vw;
+    letter-spacing: 2px;
   }
 }
 @keyframes blink {
