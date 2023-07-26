@@ -438,6 +438,7 @@ nav .bm-overlay {
     font-size: 5.5vw;
   }
   .home header code::after {
+    margin-right: -1rem;
     width: 0.5rem;
   }
   .home header h1 {
