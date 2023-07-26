@@ -15,8 +15,6 @@ export default function Contact() {
 		user_email: '',
 		message: '',
 	});
-	const { VITE_SERVICE_ID, VITE_TEMPLATE_ID, VITE_PUBLIC_KEY } = import.meta
-		.env;
 
 	const handleChange = (event: any) => {
 		const { name, value } = event.target;
@@ -32,10 +30,10 @@ export default function Contact() {
 
 		emailjs
 			.sendForm(
-				VITE_SERVICE_ID!,
-				VITE_TEMPLATE_ID!,
+				'service_cydu9t9',
+				'template_mdpyund',
 				form.current!,
-				VITE_PUBLIC_KEY!
+				'9JiUIKxGScSLAmNrE'
 			)
 			.then(
 				(res) => {
