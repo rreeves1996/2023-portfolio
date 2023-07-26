@@ -7,17 +7,18 @@ import emailjs from '@emailjs/browser';
 import ScrollIntoView from 'react-scroll-into-view';
 
 export default function Contact() {
-	var form = useRef<HTMLFormElement>(null);
-	var [displayed, setDisplayed] = useState<boolean>(false);
-	var [submitted, setSubmitted] = useState<boolean>(false);
-	var [formState, setFormState] = useState({
+	const form = useRef<HTMLFormElement>(null);
+	const [displayed, setDisplayed] = useState<boolean>(false);
+	const [submitted, setSubmitted] = useState<boolean>(false);
+	const [formState, setFormState] = useState({
 		user_name: '',
 		user_email: '',
 		message: '',
 	});
-	var { VITE_SERVICE_ID, VITE_TEMPLATE_ID, VITE_PUBLIC_KEY } = import.meta.env;
+	const { VITE_SERVICE_ID, VITE_TEMPLATE_ID, VITE_PUBLIC_KEY } = import.meta
+		.env;
 
-	var handleChange = (event: any) => {
+	const handleChange = (event: any) => {
 		const { name, value } = event.target;
 
 		setFormState({
@@ -26,7 +27,7 @@ export default function Contact() {
 		});
 	};
 
-	var sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
+	const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
 		e.preventDefault();
 
 		emailjs
