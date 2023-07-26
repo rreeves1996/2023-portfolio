@@ -80,6 +80,36 @@
   font-weight: 900;
   font-style: italic;
 }
+@font-face {
+  font-family: "Inconsolata";
+  src: local("Inconsolata"), url("./fonts/Inconsolata/Inconsolata-Light.ttf") format("truetype");
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inconsolata";
+  src: local("Inconsolata"), url("./fonts/Inconsolata/Inconsolata-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inconsolata";
+  src: local("Inconsolata"), url("./fonts/Inconsolata/Inconsolata-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inconsolata";
+  src: local("Inconsolata"), url("./fonts/Inconsolata/Inconsolata-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inconsolata";
+  src: local("Inconsolata"), url("./fonts/Inconsolata/Inconsolata-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: bold;
+}
 nav {
   display: flex;
   justify-content: space-between;
@@ -308,6 +338,7 @@ nav .bm-overlay {
   flex-direction: column;
   filter: drop-shadow(0px 0px 100px rgba(255, 255, 255, 0.178));
   width: 90%;
+  white-space: nowrap;
 }
 .home header h1 {
   font-size: 10rem;
@@ -319,27 +350,38 @@ nav .bm-overlay {
   text-transform: uppercase;
   letter-spacing: -2px;
   margin: 0 0 0.8rem 0;
-  white-space: nowrap;
 }
 .home header h4 {
   font-size: 1.7rem;
   font-weight: 100;
-  letter-spacing: 3px;
+  letter-spacing: 0.4rem;
+}
+.home header h4 span {
+  margin: 0 1.5rem;
 }
 .home header code {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
+  font-family: "Inconsolata";
+  font-weight: 200;
   padding: 0.2rem 0.5rem;
   font-size: 2.5rem;
-  background: #5dffd9;
-  color: #5f37ce;
-  letter-spacing: -3px;
-  text-transform: uppercase;
-  text-decoration: underline;
-  text-decoration-thickness: 2px;
-  text-underline-offset: 3px;
+}
+.home header code::after {
+  position: relative;
+  content: "";
+  width: 1rem;
+  margin-left: 0.2rem;
+  margin-right: -2rem;
+  margin-top: 0.2rem;
+  height: 85%;
+  background-color: #41d4b7;
+  animation-name: blink;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: backwards;
 }
 .home .home-menu {
   display: flex;
@@ -353,7 +395,7 @@ nav .bm-overlay {
   width: 8rem;
   height: 3.5rem;
   margin: 0 2rem;
-  background-color: #412291;
+  background-color: #33177a;
   color: #5dffd9;
   border: 3px solid #5dffd9;
   border-radius: 8px;
@@ -365,7 +407,7 @@ nav .bm-overlay {
 }
 .home .home-menu div .home-button:hover {
   background: #5dffd9;
-  color: #412291;
+  color: #33177a;
 }
 
 @media screen and (max-width: 1052px) {
@@ -382,6 +424,10 @@ nav .bm-overlay {
   }
   .home header h4 {
     font-size: 1.5rem;
+    letter-spacing: 0.2rem;
+  }
+  .home header h4 span {
+    margin: 0 0.7rem;
   }
 }
 @media screen and (max-width: 768px) {
@@ -393,12 +439,29 @@ nav .bm-overlay {
   }
   .home header h1 {
     margin-top: 0.5rem;
-    font-size: 13vw;
+    font-size: 15vw;
     letter-spacing: -3px;
     filter: drop-shadow(-2px 2px 0px #41d4b7);
   }
   .home header h4 {
     font-size: 4vw;
+  }
+}
+@keyframes blink {
+  0% {
+    background-color: transparent;
+  }
+  15% {
+    background-color: #41d4b7;
+  }
+  60% {
+    background-color: #41d4b7;
+  }
+  75% {
+    background-color: transparent;
+  }
+  100% {
+    background-color: transparent;
   }
 }
 .about {
@@ -526,7 +589,7 @@ nav .bm-overlay {
   width: 3.1rem;
   height: 3.1rem;
   font-size: 1.8rem;
-  color: #412291;
+  color: #33177a;
   background-color: #41d4b7;
   border-radius: 50%;
 }
@@ -548,7 +611,7 @@ nav .bm-overlay {
   border: none;
   margin: 1rem;
   border-radius: 0.4rem;
-  color: #412291;
+  color: #33177a;
   background-color: rgba(255, 255, 255, 0.171);
   font-size: 2.7rem;
   margin: 1rem;
@@ -900,7 +963,7 @@ nav .bm-overlay {
 }
 .contact .form-container .submit-btn:hover {
   background-color: #6bbeda;
-  color: #412291;
+  color: #33177a;
 }
 .contact .submit-confirm-container {
   display: flex;
@@ -1007,7 +1070,7 @@ body {
   font-family: "Roboto";
   font-weight: 300;
   overflow-x: hidden;
-  background: #412291;
+  background: #33177a;
   color: #f5f2f5;
   overflow-y: scroll;
   min-width: 100vw !important;

@@ -1,16 +1,22 @@
 import React from 'react';
 import { HiCodeBracketSquare } from 'react-icons/hi2';
 import ScrollIntoView from 'react-scroll-into-view';
+import useWindowDimensions from '../../hooks/useWindowDimensions';
 
 export default function Header() {
+	const { height, width } = useWindowDimensions();
 	return (
 		<section className='home'>
 			<header>
-				<code>{`Ryan Reeves`}</code>
+				<code>Ryan Reeves</code>
 
-				<h1>{`{ Front-End Developer }`}</h1>
+				<h1>
+					{width >= 768 ? `{ Front-End Developer }` : `{ Web Developer }`}
+				</h1>
 
-				<h4>React.js | TypeScript | Node.js</h4>
+				<h4>
+					React.js <span>|</span> TypeScript <span>|</span> Node.js
+				</h4>
 			</header>
 
 			<section className='home-menu'>

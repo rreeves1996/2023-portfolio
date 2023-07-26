@@ -5,6 +5,7 @@
 	src: local('Qualy'), url('./fonts/Qualy/Qualy.ttf') format('truetype');
 	font-weight: normal;
 }
+
 @font-face {
 	font-family: 'Qualy';
 	src: local('Qualy'), url('./fonts/Qualy/Qualy-Bold.ttf') format('truetype');
@@ -19,6 +20,7 @@
 	font-weight: 100;
 	font-style: normal;
 }
+
 @font-face {
 	font-family: 'Roboto';
 	src: local('Roboto'),
@@ -26,6 +28,7 @@
 	font-weight: 100;
 	font-style: italic;
 }
+
 @font-face {
 	font-family: 'Roboto';
 	src: local('Roboto'),
@@ -33,6 +36,7 @@
 	font-weight: 300;
 	font-style: normal;
 }
+
 @font-face {
 	font-family: 'Roboto';
 	src: local('Roboto'),
@@ -40,6 +44,7 @@
 	font-weight: 300;
 	font-style: italic;
 }
+
 @font-face {
 	font-family: 'Roboto';
 	src: local('Roboto'),
@@ -47,6 +52,7 @@
 	font-weight: 400;
 	font-style: normal;
 }
+
 @font-face {
 	font-family: 'Roboto';
 	src: local('Roboto'),
@@ -54,6 +60,7 @@
 	font-weight: 400;
 	font-style: italic;
 }
+
 @font-face {
 	font-family: 'Roboto';
 	src: local('Roboto'),
@@ -61,6 +68,7 @@
 	font-weight: 500;
 	font-style: normal;
 }
+
 @font-face {
 	font-family: 'Roboto';
 	src: local('Roboto'),
@@ -68,12 +76,14 @@
 	font-weight: 500;
 	font-style: italic;
 }
+
 @font-face {
 	font-family: 'Roboto';
 	src: local('Roboto'), url('./fonts/Roboto/Roboto-Bold.ttf') format('truetype');
 	font-weight: 700;
 	font-style: normal;
 }
+
 @font-face {
 	font-family: 'Roboto';
 	src: local('Roboto'),
@@ -81,6 +91,7 @@
 	font-weight: 700;
 	font-style: italic;
 }
+
 @font-face {
 	font-family: 'Roboto';
 	src: local('Roboto'),
@@ -88,10 +99,53 @@
 	font-weight: 900;
 	font-style: normal;
 }
+
 @font-face {
 	font-family: 'Roboto';
 	src: local('Roboto'),
 		url('./fonts/Roboto/Roboto-BlackItalic.ttf') format('truetype');
 	font-weight: 900;
 	font-style: italic;
+}
+
+// Inconsolata
+
+@font-face {
+	font-family: 'Inconsolata';
+	src: local('Inconsolata'),
+		url('./fonts/Inconsolata/Inconsolata-Light.ttf') format('truetype');
+	font-weight: 200;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Inconsolata';
+	src: local('Inconsolata'),
+		url('./fonts/Inconsolata/Inconsolata-Regular.ttf') format('truetype');
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Inconsolata';
+	src: local('Inconsolata'),
+		url('./fonts/Inconsolata/Inconsolata-Medium.ttf') format('truetype');
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Inconsolata';
+	src: local('Inconsolata'),
+		url('./fonts/Inconsolata/Inconsolata-SemiBold.ttf') format('truetype');
+	font-weight: 600;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Inconsolata';
+	src: local('Inconsolata'),
+		url('./fonts/Inconsolata/Inconsolata-Bold.ttf') format('truetype');
+	font-weight: 700;
+	font-style: bold;
 }

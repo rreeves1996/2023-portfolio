@@ -78,8 +78,8 @@ export default function About() {
 									width >= 768
 										? `translateY(${-350 + 80 * currentSlide}px)`
 										: width >= 376
-										? `translateY(${-350 + 140 * currentSlide}px)`
-										: `translateY(${-350 + 145 * currentSlide}px)`,
+										? `translateY(${-300 + 140 * currentSlide}px)`
+										: `translateY(${-330 + 145 * currentSlide}px)`,
 							}}>
 							<GoEllipsis aria-role='ellipsis button' />
 						</button>
