@@ -68,12 +68,14 @@ export default function Contact() {
 						/>
 
 						<div className='contact-button-container'>
-							<button
-								className='social-button'
-								aria-role='toggle form display'
-								onClick={() => setDisplayed(!displayed)}>
-								<HiMail />
-							</button>
+							<ScrollIntoView selector='.form-container'>
+								<button
+									className='social-button'
+									aria-role='toggle form display'
+									onClick={() => setDisplayed(!displayed)}>
+									<HiMail />
+								</button>
+							</ScrollIntoView>
 
 							<a
 								href='https://github.com/rreeves1996'
