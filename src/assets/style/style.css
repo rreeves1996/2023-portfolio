@@ -346,7 +346,7 @@ nav .bm-overlay {
   opacity: 0.95;
   margin: 0;
   filter: drop-shadow(-4px 4px 0px #41d4b7);
-  font-family: "Alumni Sans Pinstripe";
+  font-family: "Alumni Sans Pinstripe" !important;
   text-transform: uppercase;
   letter-spacing: -2px;
   margin: 0 0 0.8rem 0;
@@ -355,6 +355,7 @@ nav .bm-overlay {
   font-size: 1.7rem;
   font-weight: 100;
   letter-spacing: 0.4rem;
+  font-family: "Roboto" !important;
 }
 .home header h4 span {
   margin: 0 1.5rem;
@@ -364,7 +365,6 @@ nav .bm-overlay {
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  font-family: "Inconsolata";
   font-weight: 200;
   padding: 0.2rem 0.5rem;
   font-size: 2.5rem;
@@ -433,6 +433,9 @@ nav .bm-overlay {
 @media screen and (max-width: 768px) {
   .home {
     background-size: cover;
+  }
+  .home header {
+    z-index: 1;
   }
   .home header code {
     font-size: 5.5vw;
