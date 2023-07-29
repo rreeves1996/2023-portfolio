@@ -21,7 +21,7 @@
 			opacity: 0.95;
 			margin: 0;
 			filter: drop-shadow(-4px 4px 0px $greenDark);
-			font-family: $accentText2;
+			font-family: $accentText2 !important;
 			text-transform: uppercase;
 			letter-spacing: -2px;
 			margin: 0 0 0.8rem 0;
@@ -31,6 +31,7 @@
 			font-size: 1.7rem;
 			font-weight: 100;
 			letter-spacing: 0.4rem;
+			font-family: $primaryText !important;
 
 			span {
 				margin: 0 1.5rem;
@@ -39,7 +40,7 @@
 
 		code {
 			@include flexCenter(row);
-			font-family: 'Inconsolata';
+			font-family: $codeText !important;
 			font-weight: 200;
 			padding: 0.2rem 0.5rem;
 			font-size: 2.5rem;
