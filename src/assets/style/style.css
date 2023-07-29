@@ -365,6 +365,7 @@ nav .bm-overlay {
   justify-content: center;
   align-items: center;
   flex-direction: row;
+  font-family: "Inconsolata" !important;
   font-weight: 200;
   padding: 0.2rem 0.5rem;
   font-size: 2.5rem;
