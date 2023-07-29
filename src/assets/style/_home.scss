@@ -126,7 +126,10 @@
 @media screen and (max-width: 768px) {
 	.home {
 		background-size: cover;
+
 		header {
+			z-index: 1;
+
 			code {
 				font-size: 5.5vw;
 
