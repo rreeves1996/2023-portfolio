@@ -436,7 +436,7 @@ nav .bm-overlay {
     background-size: cover;
   }
   .home header {
-    z-index: 1;
+    z-index: 50;
   }
   .home header code {
     font-size: 5.5vw;
