@@ -687,8 +687,12 @@ nav .bm-overlay {
     width: 14.5rem !important;
     transform: translate(-0.2rem, 700%) !important;
   }
-  .portfolio .portfolio-body p {
-    padding: 0 2rem;
+  .portfolio .portfolio-body {
+    width: 85%;
+  }
+  .portfolio .project-desc {
+    font-size: 16px !important;
+    line-height: 2;
   }
 }
 @media screen and (max-width: 668px) {
@@ -1009,12 +1013,17 @@ nav .bm-overlay {
   .contact .left-side {
     border-right: none !important;
   }
+  .contact .right-side {
+    max-width: none !important;
+  }
   .contact .right-side p {
-    font-size: 1.5rem;
+    font-size: 16px;
+    line-height: 2;
   }
   .contact .right-side h4 {
     text-align: center;
     font-size: 2rem;
+    margin-top: 4rem !important;
   }
   .contact header h2 {
     font-size: 7rem;

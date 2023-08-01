@@ -162,7 +162,7 @@ export default function Portfolio() {
 				</div>
 
 				{PROJECTS[currentSlide].desc.map((p) => (
-					<p>{p}</p>
+					<p className='project-desc'>{p}</p>
 				))}
 			</section>
 		</section>
