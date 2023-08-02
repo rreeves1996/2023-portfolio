@@ -10,9 +10,7 @@ export default function Header() {
 			<header>
 				<code>Ryan Reeves</code>
 
-				<h1>
-					{width >= 768 ? `{ Front-End Developer }` : `{ Web Developer }`}
-				</h1>
+				<h1>{`{ Web Developer }`}</h1>
 
 				<h4>
 					React.js <span>|</span> TypeScript <span>|</span> Node.js

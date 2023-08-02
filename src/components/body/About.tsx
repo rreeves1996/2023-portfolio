@@ -18,12 +18,13 @@ const SLIDES = [
 		opportunity to be involved with both heavily everyday!
 	</p>,
 	<p className='p-section' style={{ margin: '0 auto', textAlign: 'left' }}>
-		Since graduating my Full-Stack Development boot camp on September 17th, I've
-		narrowed my focus into Front-End Development, primarily React.
+		Since graduating my Full-Stack Development boot camp on September 17th,
+		2022, I've been unrelenting in my learning, making significant strides
+		everyday.
 	</p>,
 	<p className='p-section' style={{ margin: '0 auto', textAlign: 'left' }}>
-		Today, I do masonry by day and program/learn by night, eagerly awaiting my
-		first position in Front-End Development. 🗿
+		Today, I teach music by day and learn by night, doing everything I can to
+		become the proficient developer I was born to be. 🌠
 	</p>,
 ];
 
