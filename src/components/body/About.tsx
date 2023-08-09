@@ -72,6 +72,7 @@ export default function About() {
 						{SLIDES.map((slide) => slide)}
 
 						<button
+							aria-role='ellipsis button'
 							onClick={() => handleAddSlide()}
 							style={{
 								opacity: currentSlide > 3 ? 0 : 1,
@@ -82,7 +83,7 @@ export default function About() {
 										? `translateY(${-250 + 140 * currentSlide}px)`
 										: `translateY(${-300 + 100 * currentSlide}px)`,
 							}}>
-							<GoEllipsis aria-role='ellipsis button' />
+							<GoEllipsis />
 						</button>
 					</div>
 				</div>
