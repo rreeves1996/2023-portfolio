@@ -33,7 +33,7 @@ const PROJECTS: Project[] = [
 		],
 	},
 	{
-		deployment: 'https://rreeves-virtual-keyboard.herokuapp.com/',
+		deployment: 'https://vercel.com/rreeves1996/virtual-keyboard',
 		github: 'https://github.com/rreeves1996/virtual-keyboard',
 		refactorNotes:
 			'https://github.com/rreeves1996/virtual-keyboard#refactor-notes',
