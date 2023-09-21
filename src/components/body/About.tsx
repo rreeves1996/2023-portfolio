@@ -7,7 +7,7 @@ import ScrollIntoView from 'react-scroll-into-view';
 import useWindowDimensions from '../../hooks/useWindowDimensions';
 
 const SLIDES = [
-	<p className='p-section' style={{ opacity: '1', marginBottom: '1.5rem' }}>
+	<p className='p-section' style={{ opacity: '1', marginBottom: '0' }}>
 		<strong>
 			Born in 1996 in Seattle, Washington, my biggest interests in life have
 			always been in music and tech.
@@ -24,7 +24,7 @@ const SLIDES = [
 	</p>,
 	<p className='p-section' style={{ margin: '0 auto', textAlign: 'left' }}>
 		Today, I teach music by day and learn by night, doing everything I can to
-		become the proficient developer I was born to be. 🌠
+		continue to progress as a developer and further my skillset. 🌠
 	</p>,
 ];
 
