@@ -28,22 +28,23 @@ export default function Contact() {
 	const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
 		e.preventDefault();
 
-		emailjs
-			.sendForm(
-				'service_cydu9t9',
-				'template_mdpyund',
-				form.current!,
-				'9JiUIKxGScSLAmNrE'
-			)
-			.then(
-				(res) => {
-					setSubmitted(true);
-					setDisplayed(false);
-				},
-				(err) => {
-					window.alert(err.text);
-				}
-			);
+		if (formState.user_name && formState.user_email && formState.message) {
+			emailjs
+				.sendForm(
+					'service_cydu9t9',
+					'template_mdpyund',
+					form.current!,
+					'9JiUIKxGScSLAmNrE'
+				)
+				.then(
+					(res) => {
+						setSubmitted(true);
+					},
+					(err) => {
+						window.alert(err.text);
+					}
+				);
+		}
 	};
 
 	return (
@@ -139,7 +140,7 @@ export default function Contact() {
 			</header>
 
 			<form
-				className={displayed ? 'form-container' : 'form-container hidden'}
+				className={submitted ? 'form-container hidden' : 'form-container'}
 				ref={form}
 				onSubmit={sendEmail}>
 				<div className='name-email'>
