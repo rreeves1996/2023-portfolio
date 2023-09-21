@@ -1,5 +1,9 @@
 import React from 'react';
 
 export default function Footer() {
-	return <footer>©2022 Ryan Reeves</footer>;
+	const getCurrentYear = () => {
+		return new Date().getFullYear();
+	};
+
+	return <footer>©{getCurrentYear()} Ryan Reeves</footer>;
 }
