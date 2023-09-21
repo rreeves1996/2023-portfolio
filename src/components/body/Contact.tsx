@@ -37,13 +37,15 @@ export default function Contact() {
 					'9JiUIKxGScSLAmNrE'
 				)
 				.then(
-					(res) => {
+					() => {
 						setSubmitted(true);
 					},
 					(err) => {
 						window.alert(err.text);
 					}
 				);
+		} else {
+			console.log(formState);
 		}
 	};
 
@@ -197,6 +199,8 @@ export default function Contact() {
 							name='message'
 							aria-role='message text area'
 							aria-required={true}
+							value={formState.message}
+							onChange={handleChange}
 						/>
 					</div>
 				</div>
