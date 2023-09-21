@@ -20,7 +20,8 @@
 		"react-router": "^6.8.0",
 		"react-router-dom": "^6.8.0",
 		"react-scroll-into-view": "^1.12.0",
-		"react-transition-group": "^4.4.5"
+		"react-transition-group": "^4.4.5",
+		"uuidv4": "^6.2.13"
 	},
 	"devDependencies": {
 		"@types/node": "^18.11.18",

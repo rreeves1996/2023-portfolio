@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { AiOutlineDoubleRight } from 'react-icons/ai';
+import { v4 } from 'uuid';
 import { HiMagnifyingGlassCircle } from 'react-icons/hi2';
 import { GoEllipsis } from 'react-icons/go';
 import portrait from '../../assets/images/me.png';
@@ -7,22 +7,34 @@ import ScrollIntoView from 'react-scroll-into-view';
 import useWindowDimensions from '../../hooks/useWindowDimensions';
 
 const SLIDES = [
-	<p className='p-section' style={{ opacity: '1', marginBottom: '0' }}>
+	<p
+		key={v4()}
+		className='p-section'
+		style={{ opacity: '1', marginBottom: '0' }}>
 		<strong>
 			Born in 1996 in Seattle, Washington, my biggest interests in life have
 			always been in music and tech.
 		</strong>
 	</p>,
-	<p className='p-section' style={{ margin: '0 auto', textAlign: 'left' }}>
+	<p
+		key={v4()}
+		className='p-section'
+		style={{ margin: '0 auto', textAlign: 'left' }}>
 		I am grateful to say that I've built my life in a way where I now have the
 		opportunity to be involved with both heavily everyday!
 	</p>,
-	<p className='p-section' style={{ margin: '0 auto', textAlign: 'left' }}>
+	<p
+		key={v4()}
+		className='p-section'
+		style={{ margin: '0 auto', textAlign: 'left' }}>
 		Since graduating my Full-Stack Development boot camp on September 17th,
 		2022, I've been unrelenting in my learning, making significant strides
 		everyday.
 	</p>,
-	<p className='p-section' style={{ margin: '0 auto', textAlign: 'left' }}>
+	<p
+		key={v4()}
+		className='p-section'
+		style={{ margin: '0 auto', textAlign: 'left' }}>
 		Today, I teach music by day and learn by night, doing everything I can to
 		continue to progress as a developer and further my skillset. 🌠
 	</p>,
@@ -72,7 +84,7 @@ export default function About() {
 						{SLIDES.map((slide) => slide)}
 
 						<button
-							aria-role='ellipsis button'
+							aria-label='ellipsis button'
 							onClick={() => handleAddSlide()}
 							style={{
 								opacity: currentSlide > 3 ? 0 : 1,

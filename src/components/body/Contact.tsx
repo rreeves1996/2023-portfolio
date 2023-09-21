@@ -74,7 +74,7 @@ export default function Contact() {
 							<ScrollIntoView selector='.form-container'>
 								<button
 									className='social-button'
-									aria-role='toggle form display'
+									aria-label='toggle form display'
 									onClick={() => setDisplayed(!displayed)}>
 									<HiMail />
 								</button>
@@ -83,7 +83,7 @@ export default function Contact() {
 							<a
 								href='https://github.com/rreeves1996'
 								target='_blank'
-								aria-role='github link'>
+								aria-label='github link'>
 								<button className='social-button github-button'>
 									<VscGithubInverted />
 								</button>
@@ -92,7 +92,7 @@ export default function Contact() {
 							<a
 								href='https://www.linkedin.com/in/rreevesdev/'
 								target='_blank'
-								aria-role='linkedin link'>
+								aria-label='linkedin link'>
 								<button className='social-button'>
 									<FaLinkedinIn />
 								</button>
@@ -147,7 +147,7 @@ export default function Contact() {
 				onSubmit={sendEmail}>
 				<div className='name-email'>
 					<div className='field name-field'>
-						<label className='label' htmlFor='user_name'>
+						<label className='label' htmlFor='user-name'>
 							Name:
 						</label>
 
@@ -155,9 +155,10 @@ export default function Contact() {
 							<input
 								className='input'
 								type='text'
+								id='user-name'
 								name='user_name'
 								placeholder='Your name'
-								aria-role='name input'
+								aria-label='name input'
 								aria-required={true}
 								value={formState.user_name}
 								onChange={handleChange}
@@ -166,7 +167,7 @@ export default function Contact() {
 					</div>
 
 					<div className='field email-field'>
-						<label className='label' htmlFor='user_email'>
+						<label className='label' htmlFor='user-email'>
 							Email:
 						</label>
 
@@ -174,9 +175,10 @@ export default function Contact() {
 							<input
 								className='input'
 								type='email'
+								id='user-email'
 								name='user_email'
 								placeholder='Your email'
-								aria-role='email input'
+								aria-label='email input'
 								aria-required={true}
 								value={formState.user_email}
 								onChange={handleChange}
@@ -186,7 +188,7 @@ export default function Contact() {
 				</div>
 
 				<div className='field body-field'>
-					<label className='label' htmlFor='message'>
+					<label className='label' htmlFor='message-box'>
 						Message:
 					</label>
 
@@ -197,7 +199,7 @@ export default function Contact() {
 							autoComplete='off'
 							placeholder='Be nice...'
 							name='message'
-							aria-role='message text area'
+							aria-label='message text area'
 							aria-required={true}
 							value={formState.message}
 							onChange={handleChange}
@@ -209,7 +211,7 @@ export default function Contact() {
 					type='submit'
 					className='submit-btn'
 					value='Send'
-					aria-role='submit button'
+					aria-label='submit button'
 					aria-required={true}>
 					Submit
 				</button>

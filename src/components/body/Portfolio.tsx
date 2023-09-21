@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { v4 } from 'uuid';
 import { FaFolder } from 'react-icons/fa';
 import Carousel from '../misc/Carousel/Carousel';
 import Slide from '../misc/Carousel/Slide';
@@ -107,6 +108,7 @@ export default function Portfolio() {
 			slide.style.zIndex = '3';
 		});
 	}, []);
+
 	return (
 		<section className='portfolio page'>
 			<section className='title'>
@@ -117,17 +119,19 @@ export default function Portfolio() {
 					</button>
 				</ScrollIntoView>
 			</section>
+
 			<header className='carousel-container'>
 				<Carousel
 					currentSlide={currentSlide}
 					handleChangeSlide={handleChangeSlide}>
 					<>
 						{PROJECTS.map((project: Project, index: number) => (
-							<Slide project={project} id={index} />
+							<Slide key={v4()} project={project} id={index} />
 						))}
 					</>
 				</Carousel>
 			</header>
+
 			<section className='portfolio-body'>
 				<h1>{PROJECTS[currentSlide].title}</h1>
 				<h5>{PROJECTS[currentSlide].subtitle}</h5>

@@ -38,14 +38,14 @@ export default function Navbar() {
 							className='nav-button'
 							id='home-link'
 							onClick={() => navigate('/')}
-							aria-role='home link'>
+							aria-label='home link'>
 							<FaHome />
 							<h6>Home</h6>
 						</div>
 					</ScrollIntoView>
 				) : (
 					<ScrollIntoView selector='.home'>
-						<div className='nav-button' aria-role='return to top link'>
+						<div className='nav-button' aria-label='return to top link'>
 							<FaArrowAltCircleUp />
 							<h6>Back to top</h6>
 						</div>
@@ -57,7 +57,7 @@ export default function Navbar() {
 							<div
 								className='nav-button'
 								id='about-link'
-								aria-role='about link'>
+								aria-label='about link'>
 								<FaUser />
 								<h6>About</h6>
 							</div>
@@ -67,7 +67,7 @@ export default function Navbar() {
 							<div
 								className='nav-button'
 								id='projects-link'
-								aria-role='projects link'>
+								aria-label='projects link'>
 								<FaFolder />
 								<h6>Projects</h6>
 							</div>
@@ -77,7 +77,7 @@ export default function Navbar() {
 							<div
 								className='nav-button'
 								id='contact-link'
-								aria-role='contact link'>
+								aria-label='contact link'>
 								<HiMail />
 								<h6>Contact</h6>
 							</div>

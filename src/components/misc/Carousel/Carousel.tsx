@@ -69,7 +69,7 @@ export default function Carousel({
 			<button
 				onClick={() => handleSlideRight()}
 				className='carousel-button left-btn'
-				aria-role='carousel left button'>
+				aria-label='carousel left button'>
 				<FaCaretLeft />
 			</button>
 
@@ -78,7 +78,7 @@ export default function Carousel({
 			<button
 				onClick={() => handleSlideLeft()}
 				className='carousel-button right-btn'
-				aria-role='carousel right button'>
+				aria-label='carousel right button'>
 				<FaCaretRight />
 			</button>
 		</div>

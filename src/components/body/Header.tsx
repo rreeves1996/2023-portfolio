@@ -22,7 +22,7 @@ export default function Header() {
 					<button
 						className='home-button'
 						id='projects-button'
-						aria-role='projects button'>
+						aria-label='projects button'>
 						Projects
 					</button>
 				</ScrollIntoView>
@@ -31,7 +31,7 @@ export default function Header() {
 					<button
 						className='home-button'
 						id='contact-button'
-						aria-role='contact button'>
+						aria-label='contact button'>
 						Contact
 					</button>
 				</ScrollIntoView>
