@@ -92,7 +92,7 @@ export default function About() {
 									width >= 768
 										? `translateY(${-370 + 95 * currentSlide}px)`
 										: width >= 376
-										? `translateY(${-250 + 140 * currentSlide}px)`
+										? `translateY(${-300 + 140 * currentSlide}px)`
 										: `translateY(${-300 + 100 * currentSlide}px)`,
 							}}>
 							<GoEllipsis />
