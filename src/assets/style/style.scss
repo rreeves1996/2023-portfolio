@@ -58,7 +58,8 @@ body {
 	background: $purpleDark;
 	color: $offWhite;
 	overflow-y: scroll;
-	min-width: 100vw !important;
+	max-width: 100vw !important;
+	width: 100vw;
 }
 main {
 	@include layoutPadding(1350px);
